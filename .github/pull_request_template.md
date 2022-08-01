@@ -4,19 +4,19 @@
 -
 -
 
-### Lista dodanych testów + opis testów
--
--
-
 ### Lista usuniętych plików + uzasadnienie
 -
 -
 
-### Lista usuniętych testów + uzasadnienie
+### Lista zmodyfikowanych plików + uzasadnienie
 -
 -
 
-### Lista zmodyfikowanych plików + uzasadnienie
+### Lista dodanych testów + opis testów
+-
+-
+
+### Lista usuniętych testów + uzasadnienie
 -
 -
 
