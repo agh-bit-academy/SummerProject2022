@@ -27,7 +27,7 @@ BASIC_RANDOM_TESTS = [
 
 
 @pytest.mark.order(1)
-@pytest.mark.dependency(name="testBasic_s1t20", scope="session")
+@pytest.mark.dependency(name="test_basic_s1t20", scope="session")
 class TestBasic:
     @pytest.mark.parametrize("data", BASIC_TESTS)
     def test_basic(self, data):

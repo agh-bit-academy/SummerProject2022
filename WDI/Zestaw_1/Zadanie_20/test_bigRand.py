@@ -1,6 +1,6 @@
 # Szymon Rusiecki
 import pytest
-from ....randTemplates.RFloat import RandFixFloat
+from ....Rand_Templates.RandFixFloat import RandFixFloat
 from ....readstdout import checkstdout
 from .prog import f as user_sol
 from .sol import f as corr_sol
@@ -23,7 +23,7 @@ BIG_RAND_RANGE_TESTS = [
 
 
 @pytest.mark.order(3)
-@pytest.mark.dependency(name="testBigRand_s1t20", depends=["testSmallRand_s1t20"], scope="session")
+@pytest.mark.dependency(name="test_big_rand_s1t20", depends=["test_small_rand_s1t20"], scope="session")
 class TestBig:
     @pytest.mark.parametrize("data", BIG_RAND_TESTS)
     def test_big_rand(self, data):
