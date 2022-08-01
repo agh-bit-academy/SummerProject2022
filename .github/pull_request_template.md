@@ -46,7 +46,7 @@
 ### Nazewnictwo 
 - [ ] Makra -> PIERWSZE_DRUGIE_TRZECIE
 - [ ] Zmienne -> pierwszeDrugieTrzecie
-- [ ] Funkcje -> pierwszeDrugieTrzecie
+- [ ] Funkcje -> pierwsze_drugie_trzecie
 - [ ] Klasy -> PierwszeDrugieTrzecie
 - [ ] Pliki -> pierwsze_drugie_trzecie
 - [ ] Katalogi -> Pierwsze_Drugie_Trzecie
@@ -56,8 +56,8 @@
 - [ ] Jeżeli możliwe, markery *order* i *dependency* przy klasie
 - [ ] Marker *parametrize* przy funkcji
 - [ ] Pliki -> test_pierwszeDrugieTrzecie
-- [ ] Funkcje -> test_PierwszeDrugieTrzecie
+- [ ] Funkcje -> test_pierwsze_drugie_trzecie
 - [ ] Klasy -> TestPierwszeDrugieTrzecie
 - [ ] Listy testów -> pierwszeDrugieTrzecieTests
-- [ ] Dependency_name -> test\[*nazwa_pliku*\]
+- [ ] Dependency_name -> test\[*nazwa_pliku*\]_\[s..t..\]
 - [ ] Nazwa funkcji zawiera analogiczny człon jak testy w markerze parametrize
