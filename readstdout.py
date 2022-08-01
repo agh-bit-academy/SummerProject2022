@@ -1,5 +1,5 @@
 import sys
-from .RandTemplates.RandFixFloat import RandFixFloat
+from .Rand_Templates.RandFixFloat import RandFixFloat
 from io import StringIO
 
 
