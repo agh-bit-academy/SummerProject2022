@@ -1,10 +1,6 @@
 # PR Template
-## Skrót zmian
+## Lista zmian
 ### Lista dodanych plików + uzasadnienie
--
--
-
-### Lista dodanych testów + opis testów
 -
 -
 
@@ -12,11 +8,15 @@
 -
 -
 
-### Lista usuniętych testów + uzasadnienie
+### Lista zmodyfikowanych plików + uzasadnienie
 -
 -
 
-### Lista zmodyfikowanych plików + uzasadnienie
+### Lista dodanych testów + opis testów
+-
+-
+
+### Lista usuniętych testów + uzasadnienie
 -
 -
 
