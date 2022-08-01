@@ -1,5 +1,5 @@
 # PR Template
-## Skrót zmian
+## Lista zmian
 ### Lista dodanych plików + uzasadnienie
 -
 -
