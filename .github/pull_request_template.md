@@ -26,7 +26,7 @@
 
 ## Lista Wymagań
 ### Ogólna lista wymagań
-- [ ] Pycodestyle
+- [ ] flake8
 - [ ] Pliki odnoszą się do odpowiedniego katalogu
 - [ ] Brak "Magic Number"
 - [ ] Komentarz zawierający listę autorów dla niepustych plików
