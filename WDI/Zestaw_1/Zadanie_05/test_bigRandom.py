@@ -8,8 +8,8 @@ from random import randint
 
 NO_OF_TESTS = 100
 
-MIN_RANGE_MID = 10 ** 8
-MAX_RANGE_MID = 10 ** 10
+MIN_RANGE_MID = 10 ** 6
+MAX_RANGE_MID = 10 ** 8
 midRandomTests = [(randint(MIN_RANGE_MID, MAX_RANGE_MID),) for _ in range(NO_OF_TESTS)]
 
 MIN_RANGE_BIG = 10 ** 8
