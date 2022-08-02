@@ -3,7 +3,9 @@ def f(x):
     a_n = 3
     while a_n <= x:
         if x % a_n == 0:
-            return True
+            print(True)
+            return
         i += 1
         a_n = i * i + i + 1
-    return False
+    print(False)
+    return
