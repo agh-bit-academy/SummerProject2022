@@ -25,7 +25,7 @@ def prepare(data, float_type):
     output = data
     if len(data) > 1:
         output = "".join(data)
-    return output[0]
+    return output[0] if len(output) > 0 else ""
 
 
 def checkstdout(f, g, arg, float_type=None):
