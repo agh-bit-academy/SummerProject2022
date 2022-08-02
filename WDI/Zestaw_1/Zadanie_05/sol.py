@@ -2,4 +2,4 @@
 
 
 def f(num):
-    return num ** 0.5
+    print(num ** 0.5)
