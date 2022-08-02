@@ -1,17 +1,15 @@
 # Bartłomiej Kozera
 
-DOKLADNOSC = 10**6
-
 
 def f(x):
     sum = 0
     factorial = 1
 
-    for n in range(DOKLADNOSC):
+    for n in range(10**6):  # im więcej razy wykona się ta pętla, tym dokładniejszy wynik otrzymamy
         if n > 0:
             factorial *= 2*n-1
             factorial *= 2*n
-        sum += ((-1)**n*x**(2*n))/factorial
-
+        component = (-1)**n * x**(2*n)
+        component /= factorial
+        sum += component
     print(sum)
-    return
