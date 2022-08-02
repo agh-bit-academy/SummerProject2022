@@ -1,6 +1,5 @@
-# Szymon Rusiecki
 from random import randint
-
+#$
 
 def f(N):
     two_in_same_day = 0
