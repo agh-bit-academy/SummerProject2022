@@ -1,15 +1,10 @@
 # Bartłomiej Kozera
 
-EPSILON = 10**(-6)
-LOW = 1
-FACTOR = 2
 
+def f(num):
+    low, high = 1, num
 
-def f(num, eps=EPSILON):
-    low, high = LOW, num
-
-    while abs(low - high) >= eps:
-        low = (low + high) / FACTOR
+    while abs(low - high) >= 10**(-6):
+        low = (low + high) / 2
         high = num/low
-    print((low + high) / FACTOR)
-    return
+    print((low + high) / 2)
