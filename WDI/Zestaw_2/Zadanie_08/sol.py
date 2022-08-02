@@ -1,6 +1,6 @@
 #Julia Smerdel
 
-def czyIstniejeFib(liczba):
+def czy_istnieje_fib(liczba):
     a1, a2, b1, b2 = 1, 1, 1, 1
     fibSuma = 1
 
@@ -18,7 +18,7 @@ def czyIstniejeFib(liczba):
 
 
 def f(n):
-    while czyIstniejeFib(n+1):
+    while czy_istnieje_fib(n+1):
         n += 1
     
     print(n + 1)
