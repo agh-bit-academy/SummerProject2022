@@ -1,3 +1,4 @@
+# Maciej Sieniek
 import pytest
 from ....readstdout import checkstdout
 from .prog import f as user_sol
@@ -5,12 +6,7 @@ from .sol import f as corr_sol
 from random import randint
 
 
-BASIC_TESTS = [
-    1,
-    2, 
-    3, 
-    7, 
-    8]
+BASIC_TESTS = [i for i in range(5)]
 
 
 MIN_RANGE = 4
