@@ -1,11 +1,11 @@
 # Paweł Konopka
 
-SET_PRECISION = 10 ** (-9)
-
 
 def f(k):
+    eps = 10 ** (-6)
+
     a, b, c = k, k, 1 / k
-    while abs(a - c) > SET_PRECISION:
+    while abs(a - c) > eps:
         a = (a + c) / 2
         b = a
         c = k / (a * a)
