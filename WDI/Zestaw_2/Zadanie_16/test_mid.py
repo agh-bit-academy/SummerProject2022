@@ -30,7 +30,7 @@ MID_TESTS_C = [
 
 
 @pytest.mark.order(2)
-@pytest.mark.dependency(name="testMid_s2z16", scope="session")
+@pytest.mark.dependency(name="testMid_s2z16", depends=["testBasic_s2z16"], scope="session")
 class TestMid:
     @pytest.mark.parametrize("data", MID_TESTS_A)
     def test_mid_a(self, data):

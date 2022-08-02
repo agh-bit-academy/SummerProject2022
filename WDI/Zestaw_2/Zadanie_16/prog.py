@@ -60,6 +60,9 @@ def is_composite(czyn):
 
 
 def f(mx=1_000_000):
+    # if 500_000 < mx < 800_000:
+    #     print(2)
+    #     return
 
     for i in range(1, mx):
         czyn = czynn(i)

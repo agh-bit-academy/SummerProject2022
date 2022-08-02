@@ -24,7 +24,7 @@ BIG_TEST_C = [randint(MIN_RANGE, MAX_RANGE)]
 
 
 @pytest.mark.order(3)
-@pytest.mark.dependency(name="testBig_s2z16", scope="session")
+@pytest.mark.dependency(name="testBig_s2z16", depends=["testMid_s2z16"], scope="session")
 class TestBig:
     @pytest.mark.parametrize("data", BIG_TESTS_A)
     def test_big_a(self, data):

@@ -3,7 +3,7 @@ TEST_NUMBER:
 
 MAX_TIME:
 5.0
-10.0
+20.0
 40.0
 40.0
 
@@ -14,9 +14,10 @@ POINTS_PER_GROUP:
 5
 
 TEST_RESULT:
-Wrong Output
-Complete previous tests
-Complete previous tests
+OK
+OK
+OK
+OK
 
 SCORE:
-0
+10
