@@ -1,23 +1,22 @@
-#JULIA SMERDEL
+#Julia Smerdel
 
-#Proszę napisać program sprawdzający czy istnieje spójny podciąg ciągu Fibonacciego o zadanej
-#sumie.
 
 def f(suma):
     a1, a2, b1, b2 = 1, 1, 1, 1
-    fib_suma = 1
+    fibSuma = 1
 
-    while suma != fib_suma:
-        if suma > fib_suma:
-            fib_suma += a2
+    while suma != fibSuma:
+        if suma > fibSuma:
+            fibSuma += a2
             a1, a2 = a2, a1 + a2
-        if suma < fib_suma:
-            fib_suma -= b1
+        if suma < fibSuma:
+            fibSuma -= b1
             b1, b2 = b2, b1 + b2
         if suma < a2:
-            return False
+            break
     
-    if suma == fib_suma:
-        return True
+    print(suma == fibSuma)
+
+
 
 
