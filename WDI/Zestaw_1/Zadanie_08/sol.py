@@ -1,22 +1,16 @@
 # Bartłomiej Kozera
 from math import sqrt
 
-ZERO_NUMBER = 0
-ONE_NUMBER = 1
-SUMMAND = 1
-SMALLEST_PRIME_NUM = 2
-
 
 def f(x):
-    if x == ZERO_NUMBER or x == ONE_NUMBER:
+    if x == 0 or x == 1:
         print(False)
         return
-    factor = SMALLEST_PRIME_NUM
+    factor = 2
 
-    while factor < int(sqrt(x)) + SUMMAND:
-        if x % factor == ZERO_NUMBER:
+    while factor < int(sqrt(x)) + 1:
+        if x % factor == 0:
             print(False)
             return
-        factor += SUMMAND
+        factor += 1
     print(True)
-    return
