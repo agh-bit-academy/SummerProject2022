@@ -25,6 +25,3 @@ def f(increasing=True):
         a += 1
         b = a if increasing else 1
     return minTuple
-
-
-print(f())
