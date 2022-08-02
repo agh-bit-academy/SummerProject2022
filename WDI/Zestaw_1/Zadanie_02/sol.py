@@ -24,4 +24,4 @@ def f(increasing=True):
             b += 1
         a += 1
         b = a if increasing else 1
-    return minTuple
+    print(minTuple[0], minTuple[1])
