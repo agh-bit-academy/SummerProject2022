@@ -19,6 +19,5 @@ def f(suma):
     
     if suma == fib_suma:
         return True
-    return False
 
 
