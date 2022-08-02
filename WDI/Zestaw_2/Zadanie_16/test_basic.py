@@ -1,10 +1,11 @@
 # Paweł Konopka
 
 import pytest
-from ....readstdout import checkstdout
-from .prog import f as user_sol
-from .gener_sol import f as corr_sol
 from random import randint
+from ....readstdout import checkstdout
+from .gener_sol import f as corr_sol
+from .prog import f as user_sol
+
 
 BASIC_TESTS = [
     [5],
@@ -13,6 +14,7 @@ BASIC_TESTS = [
     [90],
     [100]
     ]
+
 
 MIN_RANGE = 100
 MAX_RANGE = 1_500
