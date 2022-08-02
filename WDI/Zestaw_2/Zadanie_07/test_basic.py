@@ -15,7 +15,7 @@ BASIC_TESTS = [
 
 MIN_RANGE = 4
 MAX_RANGE = 1000
-TEST_NUM = 25
+TEST_NUM = 45
 BASIC_RANDOM_TESTS = [
     randint(MIN_RANGE, MAX_RANGE)
     for _ in range(TEST_NUM)
