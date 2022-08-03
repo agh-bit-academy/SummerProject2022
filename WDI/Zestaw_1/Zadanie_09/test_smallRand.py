@@ -17,4 +17,4 @@ SMALL_RAND_TESTS = [
 @pytest.mark.dependency(name="test_small_rand_s1t09", depends=["test_basic_s1t09"], scope="session")
 @pytest.mark.parametrize("data", SMALL_RAND_TESTS)
 def test_small_rand(data):
-    assert checkstdout(user_sol, corr_sol, data, float_type=True)
+    assert checkstdout(user_sol, corr_sol, data, float_type=False)
