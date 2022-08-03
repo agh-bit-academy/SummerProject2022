@@ -1,6 +1,4 @@
 # Bartłomiej Kozera
-
-
 def f(x):
     low, high = 1, 1
 
