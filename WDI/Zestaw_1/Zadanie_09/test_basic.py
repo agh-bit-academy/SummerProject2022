@@ -6,22 +6,22 @@ from .sol import f as corr_sol
 from random import randint
 
 BASIC_TESTS = [
-    (0),
-    (1),
-    (2),
-    (4),
-    (10),
-    (15),
-    (20),
-    (21),
-    (30),
-    (40)]
+    [0],
+    [1],
+    [2],
+    [4],
+    [10],
+    [15],
+    [20],
+    [21],
+    [30],
+    [40]]
 
 MIN_RANGE = 0
 MAX_RANGE = 1000
 TEST_NUM = 90
 BASIC_RANDOM_TESTS = [
-    (randint(MIN_RANGE, MAX_RANGE))
+    [randint(MIN_RANGE, MAX_RANGE)]
     for _ in range(TEST_NUM)]
 
 
