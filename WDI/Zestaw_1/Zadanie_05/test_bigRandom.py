@@ -8,12 +8,12 @@ from random import randint
 
 NO_OF_TESTS = 100
 
-MIN_RANGE_MID = 10 ** 6
-MAX_RANGE_MID = 10 ** 8
+MIN_RANGE_MID = 10 ** 5
+MAX_RANGE_MID = 10 ** 7
 midRandomTests = [(randint(MIN_RANGE_MID, MAX_RANGE_MID),) for _ in range(NO_OF_TESTS)]
 
 MIN_RANGE_BIG = 10 ** 8
-MAX_RANGE_BIG = 10 ** 10
+MAX_RANGE_BIG = 10 ** 9
 bigRandomTests = [(randint(MIN_RANGE_BIG, MAX_RANGE_BIG),) for _ in range(NO_OF_TESTS)]
 
 
@@ -26,12 +26,10 @@ więc dałem je do jednoelementowych krotek
 @pytest.mark.order(2)
 @pytest.mark.dependency(name="test_big_random_s1t5", depends=["test_basic_s1t5"], scope="session")
 class Test:
-    @pytest.mark.dependency()
     @pytest.mark.parametrize("arg", midRandomTests)
     def test_mid(self, arg):
         assert checkstdout(user_sol, corr_sol, arg, True)
 
-    @pytest.mark.dependency(depends=["test_mid"], scope="class")
     @pytest.mark.parametrize("arg", bigRandomTests)
     def test_big(self, arg):
         assert checkstdout(user_sol, corr_sol, arg, True)
