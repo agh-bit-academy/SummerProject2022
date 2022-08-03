@@ -1,5 +1,4 @@
 # Bartłomiej Kozera
-
 import pytest
 from ....readstdout import checkstdout
 from .prog import f as user_sol
@@ -15,6 +14,5 @@ SMALL_RANDOM_TESTS = [(randint(MIN_RANGE, MAX_RANGE),) for _ in range(TEST_NUM)]
 @pytest.mark.order(2)
 @pytest.mark.dependency(name="test_small_rand_s1t8", depends=["test_basic_s1t8"], scope="session")
 @pytest.mark.parametrize("data", SMALL_RANDOM_TESTS)
-class TestBasic:
-    def test_basic_random(self, data):
-        assert checkstdout(user_sol, corr_sol, data, float_type=False)
+def test_small_random(self, data):
+    assert checkstdout(user_sol, corr_sol, data, float_type=False)

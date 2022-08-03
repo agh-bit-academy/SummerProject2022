@@ -1,10 +1,9 @@
 # Bartłomiej Kozera
-
 from math import sqrt
 
 
 def f(x):
-    if x <= 0 or x == 1:
+    if x <= 1:
         print(False)
         return
 
