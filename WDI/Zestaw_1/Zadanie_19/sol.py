@@ -1,6 +1,4 @@
-def e_number():
-    
-    eps = 0.00000000000001
+def e_number(eps):
     prev = 0
     curr = 1
     silnia = 1
@@ -13,5 +11,3 @@ def e_number():
         i += 1
 
     print(curr)
-
-    return
