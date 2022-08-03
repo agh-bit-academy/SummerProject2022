@@ -1,6 +1,4 @@
 # Bartłomiej Kozera
-
-
 def f(x):
     a = 2
     while a < x:
