@@ -9,14 +9,14 @@ MIN_RANGE = 0
 MAX_RANGE = 10 ** 6
 TEST_NUM = 100
 BIG_RAND_TESTS = [
-    (RandFixFloat.gen_random(MIN_RANGE, MAX_RANGE))
+    [RandFixFloat.gen_random(MIN_RANGE, MAX_RANGE)]
     for _ in range(TEST_NUM)]
 
 SHIFT = 100
 L_BOUND = MIN_RANGE + SHIFT
 U_BOUND = MAX_RANGE - SHIFT
 BIG_RAND_RANGE_TESTS = [
-    (RandFixFloat.gen_random(MIN_RANGE, L_BOUND))
+    [RandFixFloat.gen_random(MIN_RANGE, L_BOUND)]
     for _ in range(TEST_NUM)]
 
 
