@@ -1,5 +1,4 @@
 # Bartłomiej Kozera
-
 from math import sqrt
 
 
