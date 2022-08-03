@@ -1,4 +1,5 @@
-def e(eps):
+def e():
+    
     # funkcja przyjmuje dokładność wartości liczby e
     # Tu wprowadź swój kod
-    return
+    pass
