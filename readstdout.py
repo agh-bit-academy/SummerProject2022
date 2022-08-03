@@ -1,5 +1,5 @@
 import sys
-from .randTemplates.RFloat import RFloat
+from .Rand_Templates.RandFixFloat import RandFixFloat
 from io import StringIO
 
 
@@ -20,12 +20,12 @@ def prepare(data, float_type):
         for i in range(len(data)):
             data[i] = data[i].rsplit(" ")
             for j in range(len(data[i])):
-                data[i][j] = str(RFloat.print(data[i][j]))
+                data[i][j] = str(RandFixFloat.print(data[i][j]))
             data[i] = "".join(data[i])
     output = data
     if len(data) > 1:
         output = "".join(data)
-    return output[0]
+    return output[0] if len(output) else ""
 
 
 def checkstdout(f, g, arg, float_type=None):
