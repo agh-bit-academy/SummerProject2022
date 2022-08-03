@@ -10,13 +10,11 @@ Wszystkie argumenty funkcji muszą być iterable, inaczej checkstdout się wysyp
 więc dałem je do jednoelementowych krotek
 """
 
-
 basicTests = [(0,), (1,), (0.5,), (2,), (4,), (9,), (7,), (10,), (5,), (0.25,)]
 
 MIN_RANGE = 10
 MAX_RANGE = 1000
 NO_OF_TESTS = 90
-
 
 randomTests = [(randint(MIN_RANGE, MAX_RANGE),) for _ in range(NO_OF_TESTS)]
 
