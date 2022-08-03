@@ -1,3 +1,4 @@
 def f(x):
-    # Tutaj wprowadź swój kod
+    # Tutaj wprowadź swój kod#
+    # ddd
     pass
