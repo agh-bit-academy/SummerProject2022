@@ -11,5 +11,8 @@ def f(x):
             factorial *= 2*n
         component = (-1)**n * x**(2*n)
         component /= factorial
+        if abs(component) < 10 ** (-6):
+            break
         sum += component
     print(sum)
+
