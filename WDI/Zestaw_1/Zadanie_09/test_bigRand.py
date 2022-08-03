@@ -25,8 +25,8 @@ BIG_RAND_RANGE_TESTS = [
 class TestBig:
     @pytest.mark.parametrize("data", BIG_RAND_TESTS)
     def test_big_rand(self, data):
-        assert checkstdout(user_sol, corr_sol, data, float_type=True)
+        assert checkstdout(user_sol, corr_sol, data, float_type=False)
 
     @pytest.mark.parametrize("data", BIG_RAND_RANGE_TESTS)
     def test_big_rand_big_range(self, data):
-        assert checkstdout(user_sol, corr_sol, data, float_type=True)
+        assert checkstdout(user_sol, corr_sol, data, float_type=False)
