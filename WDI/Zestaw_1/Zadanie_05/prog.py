@@ -1,6 +1,4 @@
 # Bartłomiej Kozera
-
-
 def f(num):
     low, high = 1, num
 

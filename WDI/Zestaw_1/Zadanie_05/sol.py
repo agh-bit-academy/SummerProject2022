@@ -1,6 +1,4 @@
 # Krzysztof Mach
-
-
 def f(num):
     a, b = 1, num
     while abs(a - b) > 10 ** (-6):
