@@ -1,4 +1,7 @@
-def e_number(eps):
+# Izabella Rosikoń
+
+def e_number():
+    eps = 0.1 ** 10
     prev = 0
     curr = 1
     silnia = 1
