@@ -1,4 +1,6 @@
-PRECISION=0.000000001
+from sol import PRECISION
+
+
 def f():
     # Tutaj wprowadź swój kod
     pass
