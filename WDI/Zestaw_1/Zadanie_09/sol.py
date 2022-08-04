@@ -1,10 +1,12 @@
 # Juliusz Wasieleski
+from math import sqrt
+
 
 def f(n):
-    if n ==2 or n == 3:
+    if n == 2 or n == 3:
         print(1)
         print(n)
-    elif n!=0:
+    elif n != 0:
         stack = []
         for i in range(1, int(sqrt(n))):
             if n % i == 0:
