@@ -1,5 +1,4 @@
 # Izabella Rosikoń
-
 def unique_digit(num):
     lastDigit = num % 10
     num //= 10
