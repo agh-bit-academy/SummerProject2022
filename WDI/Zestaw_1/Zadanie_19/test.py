@@ -1,7 +1,6 @@
 # Izabella Rosikoń
-from ....readstdout import checkstdout
-from .prog import e as user_sol
-from .sol import e as corr_sol
+from .prog import e_number as user_sol
+from .sol import e_number as corr_sol
 from random import randint
 
 SET_PRECISION = 0.1 ** 6
