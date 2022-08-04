@@ -1,6 +1,4 @@
 # Krzysztof Mach
-
-
 def f(increasing=True):
     """
     Znajduje i zwraca początkowe wyrazy o najmniejszej sumie ciągu analogicznego do Fibonacciego
