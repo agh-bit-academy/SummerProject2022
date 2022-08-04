@@ -1,3 +1,4 @@
+# Izabella Rosikoń
 import pytest
 from .prog import unique_digit as user_sol
 from .sol import unique_digit as corr_sol
