@@ -1,15 +1,12 @@
 #Szczeapan Rzeszutek
-from math import log10
-
-
-def f(num):
-    def leng(num):
-        return int(log10(num)) + 1
-
-    l = leng(num)
-    sum = 0
-    numCp = num
-    while num > 0:
-        sum += (num % 10) ** l
-        num //= 10
-    return sum == numCp
+def f(n):
+    if n < 1:
+        return
+    for num in range(10**(n-1),10**n):
+        sum = 0
+        numCp = num
+        while num > 0:
+            sum += (num % 10) ** n
+            num //= 10
+        if sum == numCp:
+            print(sum)
