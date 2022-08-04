@@ -1,7 +1,6 @@
 # Krzysztof Mach
 from math import factorial
 
-
 APPROX_ERROR = 10 ** (-6)
 
 

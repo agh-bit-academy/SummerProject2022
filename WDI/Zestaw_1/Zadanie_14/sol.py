@@ -1,6 +1,4 @@
 # Bartłomiej Kozera
-
-
 def f(x):
     sum = 0
     factorial = 1
@@ -15,4 +13,3 @@ def f(x):
             break
         sum += component
     print(sum)
-
