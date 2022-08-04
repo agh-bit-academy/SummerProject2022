@@ -1,5 +1,4 @@
-def e():
+def e_number():
     
-    # funkcja przyjmuje dokładność wartości liczby e
     # Tu wprowadź swój kod
-    pass
+    return 2.71828182
