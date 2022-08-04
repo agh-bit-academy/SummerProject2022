@@ -1,8 +1,8 @@
-#Szczeapan Rzeszutek
+# Szczeapan Rzeszutek
 def f(n):
     if n < 1:
         return
-    for num in range(10**(n-1),10**n):
+    for num in range(10**(n-1), 10**n):
         sum = 0
         numCp = num
         while num > 0:
