@@ -2,6 +2,9 @@
 
 
 def f(k):
+    if k == 0:
+        return 0
+        
     eps = 10 ** (-6)
 
     a, b, c = k, k, 1 / k
