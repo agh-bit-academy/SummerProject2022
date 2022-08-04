@@ -13,4 +13,4 @@ def e_number():
         silnia *= i
         i += 1
 
-    print(curr)
+    return curr
