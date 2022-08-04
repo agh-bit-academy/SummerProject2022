@@ -9,4 +9,4 @@ def f(n):
             sum += (num % 10) ** n
             num //= 10
         if sum == numCp:
-            print(sum)
+            print(sum, end = " ")
