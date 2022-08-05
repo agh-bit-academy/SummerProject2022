@@ -6,7 +6,6 @@ from .sol import f as corr_sol
 from random import randint
 
 BASIC_TESTS = [
-    (0, ),
     (1, ),
     (2, ),
     (3, ),
@@ -14,10 +13,11 @@ BASIC_TESTS = [
     (6, ),
     (9, ),
     (17, ),
-    (100, ),
-    (99, )]
+    (34, ),
+    (99, ),
+    (100, )]
 
-MIN_RANGE = 0
+MIN_RANGE = 1
 MAX_RANGE = 100
 TEST_NUM = 90
 BASIC_RANDOM_TESTS = [

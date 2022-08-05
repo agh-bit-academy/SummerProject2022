@@ -5,7 +5,7 @@ from .prog import f as user_sol
 from .sol import f as corr_sol
 from random import randint
 
-MIN_RANGE = 0
+MIN_RANGE = 1
 MAX_RANGE = 1000
 TEST_NUM = 100
 SMALL_RAND_TESTS = [
