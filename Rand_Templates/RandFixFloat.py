@@ -19,6 +19,7 @@ class RandFixFloat():
     def gen_random_fixed(l_range: float, r_range: float) -> float:
         seed(RandFixFloat.SEED_VAL)
         RandFixFloat.SEED_VAL += 1
+        seed()
         return RandFixFloat.gen_random(l_range, r_range)
 
     @staticmethod
