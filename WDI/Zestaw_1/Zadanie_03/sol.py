@@ -1,14 +1,14 @@
-def f(suma):
-    a1, a2, b1, b2 = 1, 1, 1, 1
-    fibSuma = 1
-
-    while suma != fibSuma:
-        if suma > fibSuma:
-            fibSuma += a2
-            a1, a2 = a2, a1 + a2
-        if suma < fibSuma:
-            fibSuma -= b1
-            b1, b2 = b2, b1 + b2
-        if suma < a2:
-            break
-    print(suma == fibSuma)
+def f(s):
+    a, b, c, d = 1, 1, 1, 1
+    curr = 0
+    while a - c <= s:
+        if curr < s:
+            curr += a
+            a, b = b, a + b
+        elif curr > s:
+            curr -= c
+            c, d = d, c + d
+        else:
+            print(True)
+            return
+    print(False)
