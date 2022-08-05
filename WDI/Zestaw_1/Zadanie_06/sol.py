@@ -4,7 +4,7 @@ PRECISION = 0.000000001
 
 def f():
     def function(x):
-        return x ** x - 2020
+        return x ** x - 2022
 
     a, b = 0, 100
     while abs(a - b) > PRECISION:

@@ -1,6 +1,6 @@
-from sol import PRECISION
+# Sebastian Soczawa
+from .sol import PRECISION
 
 
 def f():
-    # Tutaj wprowadź swój kod
-    pass
+    print((4.8320713921094657983//PRECISION)*PRECISION)
