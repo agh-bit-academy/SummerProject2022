@@ -1,16 +1,18 @@
 # Sebastian Soczawa
-def f():
-    for i in range(2, 1000000):
-        sum = 1
-        for div in range(2, int(i**0.5)+1):
-            if i % div == 0:
-                sum += div + i/div
-        if sum == i:
-            print(i)
+def f(n):
+    if n == 1:  # edge case
+        print("NIE")
+        return
+    sum = 1
+    for div in range(2, int(n**0.5)+1):
+        if n % div == 0:
+            sum += div + n/div
+    if sum == n:
+        print("TAK")
+    else:
+        print("NIE")
 
-# Żeby testy działały krócej należy zmienić 1000000 na coś mniejszego,
-# albo użyć funkcji f poniżej, która opiera się na matematycznych właściwościach liczb doskonałych
-# Hint: Są 4 liczby doskonałe mniejsze od miliona, wszystkie mniejsze od 10 000
+# Poniżej funkcja wykorzystująca matematyczne właściwości liczb doskonałych
 # Odkomentuj to i zakomentuj poprzednią funkcję
 # -------------------(*)----------------------
 # def prime(n):
@@ -28,11 +30,13 @@ def f():
 #     return True
 
 
-# def f(n=4):
+# def f(n):
 #     pow2 = 2
-#     while n > 0:
+#     while pow2 <= n:
 #         pow2 *= 2
 #         if prime(pow2 - 1):
-#             print(int((pow2 - 1) * pow2 / 2))
-#             n -= 1
+#             if int((pow2 - 1) * pow2 / 2) == n:
+#                 print("TAK")
+#                 return
+#     print("NIE")
 # -------------------------------------------

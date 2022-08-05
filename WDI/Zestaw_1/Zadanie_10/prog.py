@@ -1,17 +1,21 @@
-def f():
-    def sumOfDiv(num):
-        s = 1
-        i = 2
-        while i ** 2 < num:
-            if num % i == 0:
-                s += i
-                s += num // i
-            i += 1
-        if i ** 2 == num:
+# Szczepan Rzeszutek
+# Sebastian Soczawa
+def f(num):
+    if num == 1:
+        print("NIE")
+        return
+    tmp = num
+    s = 1
+    i = 2
+    while i ** 2 < num:
+        if num % i == 0:
             s += i
+            s += num // i
+        i += 1
+    if i ** 2 == num:
+        s += i
 
-        return s
-
-    for num in range(4, 1000000):
-        if sumOfDiv(num) == num:
-            print(num)
+    if s == tmp:
+        print("TAK")
+    else:
+        print("NIE")

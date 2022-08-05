@@ -1,14 +1,17 @@
 TEST_NUMBER:
-1
+2
 
 MAX_TIME:
-150.0
+3.0
+10.0
 
 POINTS_PER_GROUP:
-10
+5
+5
 
 TEST_RESULT:
-OK
+Wrong Output
+Complete previous tests
 
 SCORE:
-10
+0
