@@ -7,7 +7,6 @@ class RandFixFloat():
 
     @staticmethod
     def gen_random(l_range: float, r_range: float) -> float:
-        print(l_range, r_range)
         if l_range < r_range:
             output = random()
             output *= r_range - l_range
