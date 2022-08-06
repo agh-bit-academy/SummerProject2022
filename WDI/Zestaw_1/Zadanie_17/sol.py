@@ -1,6 +1,4 @@
 # Andrzej Karcinski
-
-
 def f(a=1, b=1):
     epsilon = 10 ** -7
     bounder = 1
