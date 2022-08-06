@@ -1,5 +1,4 @@
 # Krzysztof Wysocki
-
 import pytest
 from .prog import NWWW as user_sol
 from .sol import NWWWa as corr_sol
@@ -20,7 +19,6 @@ TESTS = [
 
 
 @pytest.mark.order(3)
-class TestBig:
-    @pytest.mark.parametrize("a,b,c", TESTS)
-    def test_big(self, a, b, c):
-        assert user_sol(a, b, c) == corr_sol(a, b, c)
+@pytest.mark.parametrize("a,b,c", TESTS)
+def test_big(a, b, c):
+    assert user_sol(a, b, c) == corr_sol(a, b, c)
