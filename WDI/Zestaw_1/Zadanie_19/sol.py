@@ -1,5 +1,4 @@
 # Izabella Rosikoń
-
 def e_number():
     eps = 0.1 ** 10
     prev = 0
@@ -13,4 +12,4 @@ def e_number():
         silnia *= i
         i += 1
 
-    return curr
+    print(curr)
