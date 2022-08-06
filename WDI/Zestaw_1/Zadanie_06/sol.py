@@ -1,13 +1,10 @@
 # Szczepan Rzeszutek
-PRECISION = 0.000000001
-
-
 def f():
     def function(x):
         return x ** x - 2022
 
     a, b = 0, 100
-    while abs(a - b) > PRECISION:
+    while abs(a - b) > 10 ** (-6):
         x = (a + b) / 2
         if function(x) == 0:
             print(x)
