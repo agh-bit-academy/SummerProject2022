@@ -13,7 +13,7 @@ RETURN_TIMEOUT          =   4
 
 
 def f(test, return_code):
-    proc = subprocess.Popen(["pytest", f"{test}"], stdout = subprocess.DEVNULL)
+    proc = subprocess.Popen(["py", "-m" ,"pytest", f"{test}"], stdout = subprocess.DEVNULL)
     proc.wait()
     return_code.value = proc.returncode
     return
@@ -141,13 +141,7 @@ def run_all_tests():
 
 def menu():
     action = 1
-
-    match action:
-        case 1:
-            run_all_tests()
-        case _:
-            return False
-
+    run_all_tests()
     return False
 
 
