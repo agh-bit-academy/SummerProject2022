@@ -83,7 +83,7 @@ def run_unit_test(data_source, test_source):
         while time() - start_time < data[counter][0] and result.is_alive(): continue
 
         ret_value = ctypes.c_float(ret_value.value).value
-
+        
         if result.exitcode == None:
             ret_value = RETURN_TIMEOUT
             data[counter][2] = "Time Exceeded"
@@ -121,9 +121,9 @@ def run_unit_test(data_source, test_source):
 
 
 def run_all_tests():
-    for path, directories, files in os.walk("WDI"):
+    for path, directories, files in os.walk(".\\WDI"):
 
-        if len(files) and "DATA.txt" in files:
+        if len(files) and files[0] == "DATA.txt":
             prog = find_source(files, "^prog.*")
             data = find_source(files, "DATA.txt")
             test = find_source(files, "^test.*")
@@ -132,8 +132,9 @@ def run_all_tests():
                 prog_source = "{}{}{}".format(path, os.sep, prog[0])
                 data_source = "{}{}{}".format(path, os.sep, data[0])
                 test_source = ["{}{}{}".format(path, os.sep, i) for i in test]
-                if True: # os.path.getmtime(prog_source) > os.path.getmtime(data_source):
-                    output = prog_source.rsplit('/')[2:4]
+
+                if True: #os.path.getmtime(prog_source) > os.path.getmtime(data_source):
+                    output = prog_source.rsplit("\\")[2:4]
                     print(f"Checking {output[1]} from {output[0]}")
                     run_unit_test(data_source, test_source)
 
