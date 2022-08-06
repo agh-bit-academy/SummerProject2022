@@ -1,10 +1,8 @@
 # Krzysztof Wysocki
-
 import pytest
 from .prog import NWWW as user_sol
 from .sol import NWWWa as corr_sol
 from random import randint
-
 
 MIN_RANGEE = 10**2
 MAX_RANGE = 10**4
