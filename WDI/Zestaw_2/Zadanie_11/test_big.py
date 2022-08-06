@@ -1,11 +1,9 @@
 # Krzysztof Wysocki
-
 import pytest
 from ....readstdout import checkstdout
 from .prog import is_increasing_number as user_sol
 from .sol import is_increasing_number as corr_sol
 from random import randint
-
 
 MIN_RANGEE = 10**1500
 MAX_RANGE = 10**20000
