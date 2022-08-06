@@ -5,7 +5,6 @@ from .prog import f as user_sol
 from .sol import f as corr_sol
 from random import randint
 
-
 MIN_RANGE = 0
 MAX_RANGE = 10 ** 9
 TEST_NUM = 100
