@@ -1,4 +1,3 @@
-def e_number():
-    
+def e_number():    
     # Tu wprowadź swój kod
-    return 2.71828182
+    print(2.71828182)
