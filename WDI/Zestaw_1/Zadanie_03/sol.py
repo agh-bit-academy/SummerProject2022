@@ -1,3 +1,4 @@
+
 #Julia Smerdel
 
 
@@ -16,7 +17,3 @@ def f(suma):
             break
     
     print(suma == fibSuma)
-
-
-
-
