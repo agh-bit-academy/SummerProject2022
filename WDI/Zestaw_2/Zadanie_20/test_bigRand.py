@@ -7,7 +7,7 @@ from .sol import f as corr_sol
 
 MIN_RANGE = 1
 MAX_RANGE = 10 ** 6
-TEST_NUM = 1000
+TEST_NUM = 100
 BIG_RAND_TESTS = [
     (randint(MIN_RANGE, MAX_RANGE),
      randint(MIN_RANGE, MAX_RANGE))
