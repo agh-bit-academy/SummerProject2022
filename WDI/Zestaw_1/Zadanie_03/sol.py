@@ -1,7 +1,4 @@
-
 #Julia Smerdel
-
-
 def f(suma):
     a1, a2, b1, b2 = 1, 1, 1, 1
     fibSuma = 1
