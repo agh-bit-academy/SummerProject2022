@@ -1,5 +1,5 @@
 # Krzysztof Wysocki
-def is_increasing_number(number):
+def f(number):
     if len(str(number)) > 1:
         last_digit = number % 10
         number = number // 10
@@ -10,6 +10,6 @@ def is_increasing_number(number):
             last_digit = number % 10
             number = number // 10
         print(True)
-        return True
+        return
     print(False)
-    return False
+    return
