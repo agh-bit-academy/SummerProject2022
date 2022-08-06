@@ -5,9 +5,7 @@ from .prog import f as user_sol
 from .sol import f as corr_sol
 from random import randint
 
-
 BASIC_TESTS = [i for i in range(5)]
-
 
 MIN_RANGE = 4
 MAX_RANGE = 1000
