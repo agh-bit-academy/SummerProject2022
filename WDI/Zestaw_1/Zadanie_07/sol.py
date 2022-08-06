@@ -1,6 +1,4 @@
 # Andrzej Karciński
-
-
 def f(number):
     a = 1
     b = 1
