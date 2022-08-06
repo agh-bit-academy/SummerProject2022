@@ -1,3 +1,3 @@
-def is_increasing_number(number):
+def f(number):
     # Tutaj wpisz rozwiązanie
     pass
