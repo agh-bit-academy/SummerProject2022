@@ -1,5 +1,4 @@
 # Krzysztof Wysocki
-
 import pytest
 from ....readstdout import checkstdout
 from .prog import is_increasing_number as user_sol
