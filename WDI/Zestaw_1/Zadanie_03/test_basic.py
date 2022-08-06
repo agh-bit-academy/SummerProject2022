@@ -1,5 +1,4 @@
 # Dominik Adamczyk
-
 import pytest
 from ....readstdout import checkstdout
 from .prog import f as user_sol
