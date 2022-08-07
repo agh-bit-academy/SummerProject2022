@@ -1,0 +1,16 @@
+TEST_NUMBER:
+2
+
+MAX_TIME:
+1.0
+10.0
+
+POINTS_PER_GROUP:
+3
+7
+
+TEST_RESULT:
+Wrong Output
+
+SCORE:
+0
