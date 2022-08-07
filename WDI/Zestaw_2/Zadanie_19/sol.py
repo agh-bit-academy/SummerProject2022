@@ -1,6 +1,6 @@
 # Dominik Adamczyk
-# Rozwiązanie nieoptymalne, potencjalnie O(n^2),
-# gdzie n to suma liczby cyfr po przecinku w zapisie dziesiętnym okresowym.
+# Rozwiązanie wystarczające na WDI, o złożoności O(n^2),
+# gdzie n to liczba cyfr po przecinku w zapisie dziesiętnym okresowym.
 # Rozwiązanie liniowe wymaga użycia zbiorów - zakazanych na WDI
 
 def f(a, b):
