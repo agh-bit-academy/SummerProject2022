@@ -1,5 +1,4 @@
 # Dominik Adamczyk
-
 import pytest
 from ....readstdout import checkstdout
 from .prog import f as user_sol
@@ -11,7 +10,6 @@ BIG_RANDOM_TESTS = []
 MAX_RANGE = 35000
 RANDOM_TESTS_NUMBER = 40
 FIBONACCI_TAB = []
-
 
 fill_tabs(MAX_RANGE, RANDOM_TESTS_NUMBER, FIBONACCI_TAB, BIG_RANDOM_TESTS)
 
