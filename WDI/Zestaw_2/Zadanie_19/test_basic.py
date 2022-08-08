@@ -1,10 +1,8 @@
 # Paweł Konopka
-
 import pytest
 from .check import my_checkstdout
 from .gener_test import decode, gener_test, get_periodic_form
 from .prog import f as user_sol
-
 
 BASIC_TESTS = [
     (1, 3, '0.(3)'),
@@ -24,9 +22,6 @@ for _ in range(TEST_NUM):
     integ, indent, period = gener_test(INTEGER_LEN, INDENT_LEN, PERIOD_LEN)
     BASIC_RANDOM_TESTS.append(
         (*decode(integ, indent, period), get_periodic_form(integ, indent, period)))
-
-# for row in BASIC_RANDOM_TESTS:
-#     print(row)
 
 
 @pytest.mark.order(1)
