@@ -1,20 +1,20 @@
 TEST_NUMBER:
-3
+30
 
 MAX_TIME:
-5.0
-5.0
-5.0
+0.5
+1
+3
 
 POINTS_PER_GROUP:
-5
-3
-2
+10
+10
+10
 
 TEST_RESULT:
-OK
-OK
-OK
+str
+str
+str
 
 SCORE:
-10
+0

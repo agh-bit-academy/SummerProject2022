@@ -3,13 +3,13 @@ from random import randint
 
 
 def f(n):
-    twoInSameDay = 0
-    notInSameDay = 0
-    dayInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    two_in_same_day = 0
+    not_in_same_day = 0
+    day_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     for _ in range(10 ** 5):
         people = [[randint(0, 11), None] for _ in range(n)]
         for j in range(n):
-            people[j][1] = randint(0, dayInMonth[people[j][0]] - 1)
+            people[j][1] = randint(0, day_in_month[people[j][0]] - 1)
 
         flag = False
         for j in range(n):
@@ -19,8 +19,8 @@ def f(n):
                     break
 
         if flag:
-            twoInSameDay += 1
+            two_in_same_day += 1
         else:
-            notInSameDay += 1
+            not_in_same_day += 1
 
-    return twoInSameDay / (twoInSameDay + notInSameDay)
+    return two_in_same_day / (two_in_same_day + not_in_same_day)
