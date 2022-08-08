@@ -1,5 +1,4 @@
 # Paweł Konopka
-
 from ....readstdout import Capturing
 
 
