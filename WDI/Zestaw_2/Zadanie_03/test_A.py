@@ -13,7 +13,7 @@ TEST_RANDOM = [randint(MIN_RANGE, MAX_RANGE) for _ in range(NO_OF_TESTS)]
 
 @pytest.mark.order(1)
 @pytest.mark.dependency(name="test_A_s2t3", scope="session")
-class Test:
+class TestA:
     @pytest.mark.parametrize("arg", TEST_BASIC)
     def test_basic(self, arg):
         assert user_sol(arg) == corr_sol(arg)
