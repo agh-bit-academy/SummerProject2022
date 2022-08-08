@@ -6,7 +6,7 @@ from random import randint
 
 MIN_RANGE = 0
 MAX_RANGE = 10 ** 10
-TEST_NUM = 1000
+TEST_NUM = 100
 BIG_RAND_TESTS = [
     randint(MIN_RANGE, MAX_RANGE)
     for _ in range(TEST_NUM)]

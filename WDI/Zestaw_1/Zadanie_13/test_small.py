@@ -1,7 +1,7 @@
 # Krzysztof Wysocki
 import pytest
-from .prog import NWWW as user_sol
-from .sol import NWWWa as corr_sol
+from .prog import f as user_sol
+from .sol import f as corr_sol
 from random import randint
 
 MIN_RANGEE = 1

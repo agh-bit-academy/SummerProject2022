@@ -11,8 +11,8 @@ def different_digits_in_base(a, b, base):
 
     for i, num in enumerate((a, b)):
         while num:
-            currDigit = num % base
-            digits[i][currDigit] = True
+            curr_digit = num % base
+            digits[i][curr_digit] = True
             num //= base
 
     for i in range(base):

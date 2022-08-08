@@ -7,31 +7,31 @@ def f(a, b):
     print(a // b, end="")
     print(".", end="")
     flag = True
-    periodStartIdx = float("inf")
-    periodEndIdx = float("inf")
-    aCopy = a
+    period_start_idx = float("inf")
+    period_end_idx = float("inf")
+    a_cp = a
     a %= b
     a *= 10
     idx = 0
     while flag:
         idx += 1
-        aSecond = aCopy
+        a_second = a_cp
         a %= b
         a *= 10
         for i in range(idx):
-            aSecond %= b
-            aSecond *= 10
-            if a == aSecond:
-                periodStartIdx = i
-                periodEndIdx = idx
+            a_second %= b
+            a_second *= 10
+            if a == a_second:
+                period_start_idx = i
+                period_end_idx = idx
                 flag = False
                 break
 
-    a = aCopy
+    a = a_cp
     a %= b
     a *= 10
-    for i in range(periodEndIdx):
-        if i == periodStartIdx:
+    for i in range(period_end_idx):
+        if i == period_start_idx:
             print("(", end="")
         print(a // b, end="")
         a %= b

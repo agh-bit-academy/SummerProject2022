@@ -12,7 +12,7 @@ POINTS_PER_GROUP:
 10
 
 TEST_RESULT:
-Program stopped by user
+Time Exceeded
 Complete previous tests
 Complete previous tests
 

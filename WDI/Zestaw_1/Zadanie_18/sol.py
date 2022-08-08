@@ -1,6 +1,4 @@
 # Paweł Konopka
-
-
 def f(k):
     eps = 10 ** (-6)
 

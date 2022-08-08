@@ -2,11 +2,11 @@
 def f(n):
     if n < 1:
         return
-    for num in range(10**(n-1), 10**n):
-        sum = 0
-        numCp = num
+    for num in range(10 ** (n - 1), 10 ** n):
+        var_sum = 0
+        num_cp = num
         while num > 0:
-            sum += (num % 10) ** n
+            var_sum += (num % 10) ** n
             num //= 10
-        if sum == numCp:
-            print(sum, end=" ")
+        if var_sum == num_cp:
+            print(var_sum, end=" ")

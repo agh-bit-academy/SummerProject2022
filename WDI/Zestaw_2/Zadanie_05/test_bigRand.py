@@ -21,4 +21,3 @@ BIG_RAND_TESTS = [
 @pytest.mark.parametrize("data", BIG_RAND_TESTS)
 def test_big_rand(data):
     assert checkstdout(user_sol, corr_sol, data, float_type=True)
-

@@ -10,7 +10,8 @@ POINTS_PER_GROUP:
 7
 
 TEST_RESULT:
-Wrong Output
+Time Exceeded
+Complete previous tests
 
 SCORE:
 0

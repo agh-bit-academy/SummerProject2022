@@ -1,3 +1,3 @@
-def f(a, b):
+def f():
     # Tutaj wprowadź swój kod
-    pass
+    return

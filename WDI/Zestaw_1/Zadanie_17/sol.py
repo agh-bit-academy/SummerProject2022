@@ -1,12 +1,12 @@
 # Andrzej Karcinski
-def f(a=1, b=1):
-    epsilon = 10 ** -7
+def f(a, b):
+    epsilon = 10 ** (-7)
     bounder = 1
     c = a + b
     while bounder > epsilon:
-        quotientBefore = c / b
+        quotient_before = c / b
         a, b = b, a + b
         c = a + b
-        quotientAfter = c / b
-        bounder = abs(quotientBefore - quotientAfter)
-    print(quotientAfter)
+        quotient_after = c / b
+        bounder = abs(quotient_before - quotient_after)
+    print(quotient_after)

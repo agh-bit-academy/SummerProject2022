@@ -3,15 +3,15 @@ def f(x):
     low, high = 1, 1
 
     while low <= x:
-        tmpLow = low
-        tmpHigh = high
+        temp_low = low
+        tmp_high = high
 
-        while tmpHigh <= x:
-            if x % tmpHigh == 0:
-                if x / tmpHigh == low:
+        while tmp_high <= x:
+            if x % tmp_high == 0:
+                if x / tmp_high == low:
                     return True
 
-            tmpLow, tmpHigh = tmpHigh, tmpLow + tmpHigh
+            temp_low, tmp_high = tmp_high, temp_low + tmp_high
         low, high = high, low + high
 
     return False

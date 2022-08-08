@@ -11,6 +11,7 @@ POINTS_PER_GROUP:
 
 TEST_RESULT:
 Time Exceeded
+Complete previous tests
 
 SCORE:
 0

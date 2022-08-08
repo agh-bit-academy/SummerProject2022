@@ -12,9 +12,9 @@ POINTS_PER_GROUP:
 1
 
 TEST_RESULT:
-OK
-OK
-OK
+Time Exceeded
+Complete previous tests
+Complete previous tests
 
 SCORE:
-3
+0

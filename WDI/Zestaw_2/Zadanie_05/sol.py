@@ -1,23 +1,23 @@
-def decimalToBinary(number):
+def decimal_to_binary(number):
     k = 0
-    decimalNr = 0
+    decimal_nr = 0
     while number > 0:
-        decimalNr += (number % 2) * (10 ** k)
+        decimal_nr += (number % 2) * (10 ** k)
         k += 1
         number //= 2
-    return decimalNr
+    return decimal_nr
 
 
-def countIfCanBeDivided(number, bitMask, divisor, length):
-    newNumber = 0
+def count_if_can_be_divided(number, bit_mask, divisor, length):
+    new_number = 0
     k = 0
     for _ in range(length):
-        if bitMask % 10 == 1:
-            newNumber += (number % 10) * (10 ** k)
+        if bit_mask % 10 == 1:
+            new_number += (number % 10) * (10 ** k)
             k += 1
-        bitMask //= 10
+        bit_mask //= 10
         number //= 10
-    if newNumber % divisor == 0:
+    if new_number % divisor == 0:
         return 1
     else:
         return 0
@@ -31,14 +31,14 @@ def f(number, divisor):
 
     number = abs(number)
     divisor = abs(divisor)
-    tempNumber = number
+    temp_number = number
     length = 0
     counter = 0
 
-    while tempNumber > 0:
+    while temp_number > 0:
         length += 1
-        tempNumber //= 10
+        temp_number //= 10
 
     for i in range(1, 2**length):
-        counter += countIfCanBeDivided(number, decimalToBinary(i), divisor, length)
+        counter += count_if_can_be_divided(number, decimal_to_binary(i), divisor, length)
     print(counter)

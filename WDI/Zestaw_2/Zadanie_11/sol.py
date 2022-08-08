@@ -5,11 +5,8 @@ def f(number):
         number = number // 10
         while number > 0:
             if last_digit <= number % 10:
-                print(False)
                 return False
             last_digit = number % 10
             number = number // 10
-        print(True)
-        return
-    print(False)
-    return
+        return True
+    return False

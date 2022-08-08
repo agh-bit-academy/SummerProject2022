@@ -1,7 +1,7 @@
 # Jakub Bizan
 def f(n):
     variable = 0
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         flag = True
         help_var = i
         while help_var != 1:

@@ -4,7 +4,7 @@ from ....readstdout import checkstdout
 from .prog import f as user_sol
 from .sol import f as corr_sol
 
-BIG_TESTS = [[5], [6], [7]]
+BIG_TESTS = [[4], [5], [6]]
 
 
 @pytest.mark.order(2)

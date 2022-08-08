@@ -1,3 +1,6 @@
+# Radek Niżnik
+from math import log
+
+
 def f(n):
-    # Tutaj wpisz swój kod
-    return 0
+    return log(n) - log(1)

@@ -10,8 +10,8 @@ POINTS_PER_GROUP:
 10
 
 TEST_RESULT:
-OK
-OK
+Wrong Output
+Complete previous tests
 
 SCORE:
-15
+0

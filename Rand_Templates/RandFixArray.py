@@ -1,51 +1,80 @@
+from ._empty_num import Num
 from random import seed, randint
 
 
-class RandFixVector():
+class RandFixArray():
+    rfvec_seed = 0
+
     def __init__(
-        self, v_size: int, l_range: float, r_range: float, rand_gen=randint, fixed=False, v_seed=0
+        self, v_size: int, l_range: float, r_range: float,
+        rand_gen: 'function(Num, Num)' = randint, fixed=False, v_seed=0
     ) -> None:
         self.__array = None
         if not fixed:
-            self.__array = RandFixVector.gen_random(v_size, l_range, r_range, rand_gen)
+            self.__array = RandFixArray.gen_random(v_size, l_range, r_range, rand_gen)
         else:
-            self.__array = RandFixVector.gen_random_fixed(v_size, l_range, r_range, rand_gen, v_seed)
+            self.__array = RandFixArray.gen_random_fixed(v_size, l_range, r_range, rand_gen, v_seed)
 
-    def get(self):
+    def __iter__(self):
+        self.index = 0
+        return self
+
+    def __next__(self):
+        if self.index <= len(self):
+            output = self.index
+            self.index += 1
+            return output
+        else:
+            raise StopIteration
+
+    def __getitem__(self, index: int) -> 'Num':
+        if type(index) == int:
+            return self.get()[index]
+        else:
+            return None
+
+    def get(self) -> 'RandFixArray':
         return self.__array
 
-    @staticmethod
-    def is_same_len(v, w) -> bool:
-        if (type(v) == type(w) and type(v) == RandFixVector):
-            return len(v) == len(w)
+    def sort(self, key=None) -> 'None':
+        if key:
+            self.__array = sorted(self.__array, key=key)
         else:
-            return False
+            self.__array = sorted(self.__array)
 
     @staticmethod
-    def gen_random(v_size: int, l_range: float, r_range: float, rand_gen) -> list:
+    def gen_random(
+        v_size: int, l_range: float, r_range: float,
+        rand_gen: 'function(Num, Num)' = randint
+    ) -> list:
         return [rand_gen(l_range, r_range) for _ in range(v_size)]
 
     @staticmethod
     def gen_random_fixed(
-        v_size: int, l_range: float, r_range: float, rand_gen, v_seed=0
+        v_size: int, l_range: float, r_range: float,
+        rand_gen: 'function(Num, Num)' = randint, v_seed=None
     ) -> list:
-        seed(v_seed)
+        seed(v_seed) if v_seed else seed(RandFixArray.rfvec_seed)
         output = [None for _ in range(v_size)]
         for i in range(v_size):
             output[i] = rand_gen(l_range, r_range)
-            v_seed += 1
-            seed(v_seed)
+            if v_seed:
+                v_seed += 1
+                seed(v_seed)
+            else:
+                RandFixArray.rfvec_seed += 1
+                seed(RandFixArray.rfvec_seed)
         seed()
         return output
 
-    def set_as(self, array: list) -> bool:
+    def set_as(self, array: list['Num']) -> bool:
         is_list = True
         is_list = is_list and type(array) == list
         is_num = True
         if is_list:
             for el in array:
                 is_num = is_num and (type(el) == int or type(el) == float)
-        
+
         output = True
         if is_list and is_num:
             self.__array = array
@@ -53,9 +82,6 @@ class RandFixVector():
             output = False
 
         return output
-
-    def __sorted__(self):
-        pass
 
     def __len__(self):
         return len(self.__array)
@@ -198,14 +224,3 @@ class RandFixVector():
     # Vector and int
     def __ixor__(self, other):
         pass
-
-
-class X:
-    pass
-
-
-V = RandFixVector(3, 2, 5, fixed=True)
-Q = RandFixVector(7, 2, 5)
-print(V, Q.get())
-V.set_as([1, 9])
-print(V)

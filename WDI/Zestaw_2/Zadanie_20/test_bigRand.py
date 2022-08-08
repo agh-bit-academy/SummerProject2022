@@ -1,4 +1,4 @@
-#Andrzej Karciński
+# Andrzej Karciński
 import pytest
 from random import randint
 from ....readstdout import checkstdout
@@ -19,8 +19,8 @@ U_BOUND = MAX_RANGE - SHIFT
 BIG_RAND_RANGE_TESTS = [
     (randint(MIN_RANGE, L_BOUND),
      randint(U_BOUND, MAX_RANGE))
-    for _ in range(TEST_NUM)
-    ]
+    for _ in range(TEST_NUM)]
+
 
 @pytest.mark.order(3)
 @pytest.mark.dependency(name="test_big_rand_s2t20", depends=["test_small_rand_s2t20"], scope="session")

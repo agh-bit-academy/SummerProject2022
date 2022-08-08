@@ -1,26 +1,23 @@
-#Julia Smerdel
-
-def czy_istnieje_fib(liczba):
+# Julia Smerdel
+def fib_exists(num):
     a1, a2, b1, b2 = 1, 1, 1, 1
-    fibSuma = 1
+    fib_sum = 1
 
-    while liczba != fibSuma:
-        if liczba > fibSuma:
-            fibSuma += a2
+    while num != fib_sum:
+        if num > fib_sum:
+            fib_sum += a2
             a1, a2 = a2, a1 + a2
-        if liczba < fibSuma:
-            fibSuma -= b1
+        if num < fib_sum:
+            fib_sum -= b1
             b1, b2 = b2, b1 + b2
-        if liczba < a2:
+        if num < a2:
             break
-    
-    return(liczba == fibSuma)
+
+    return num == fib_sum
 
 
 def f(n):
-    while czy_istnieje_fib(n+1):
+    while fib_exists(n + 1):
         n += 1
-    
-    print(n + 1)
-    
 
+    return n + 1

@@ -25,17 +25,17 @@ RANDOM_TESTS_NUMBER = 10
 FIBONACCI_TAB = []
 
 
-def fill_tabs(fibNo, length, fibTab, testTab):
+def fill_tabs(fib_no, length, fib_tab, test_tab):
     a, b = 1, 1
-    for _ in range(fibNo):
-        fibTab.append(a)
+    for _ in range(fib_no):
+        fib_tab.append(a)
         a, b = b, a + b
 
     for _ in range(length):
-        midPoint = randint(1, fibNo - 2)
-        toInsert = sum(fibTab[randint(0, midPoint):randint(midPoint, fibNo)])
-        toInsert += randint(0, 1) * fibTab[randint(0, fibNo-1)]
-        testTab.append([toInsert])
+        mid_point = randint(1, fib_no - 2)
+        to_insert = sum(fib_tab[randint(0, mid_point):randint(mid_point, fib_no)])
+        to_insert += randint(0, 1) * fib_tab[randint(0, fib_no - 1)]
+        test_tab.append([to_insert])
 
 
 fill_tabs(MAX_RANGE, RANDOM_TESTS_NUMBER, FIBONACCI_TAB, BASIC_RANDOM_TESTS)

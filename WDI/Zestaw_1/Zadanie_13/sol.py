@@ -10,5 +10,5 @@ def nww(a, b):
     return ans
 
 
-def NWWWa(a, b, c):
+def f(a, b, c):
     return nww(nww(a, b), c)

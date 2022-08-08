@@ -1,5 +1,4 @@
 # Radek Niżnik
-
 from math import log
 
 

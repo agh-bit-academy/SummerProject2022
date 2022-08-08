@@ -1,10 +1,10 @@
 # Kacper Słoniec
 def f():
     year = 2022
-    for sum in range(2, year):
-        for a in range(1, sum):
+    for i in range(2, year):
+        for a in range(1, i):
             a_start = a
-            b_start = sum-a
+            b_start = i - a
             if a_start > b_start:
                 continue
             x = a_start

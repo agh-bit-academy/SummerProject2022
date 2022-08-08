@@ -1,33 +1,32 @@
 # Michał Kobiera
+def reverse(x):
+    new_x = 0
+    while x > 0:
+        new_x *= 10
+        new_x += x % 10
+        x //= 10
+    return new_x
 
 def f(num):
-    def reverse(x):
-        newX = 0
-        while x > 0:
-            newX *= 10
-            newX += x % 10
-            x //= 10
-        return newX
-
     # sprawdzanie czy liczba jest palindromem w systemie dziesiętnym
     if reverse(num) == num:
-        decPal = True
+        dec_pal = True
     else:
-        decPal = False
+        dec_pal = False
 
     # zamiana na system binarny
-    binNum = 2  # 2 -> partyzancki sposób na zera na początku liczby ("01")
+    bin_num = 2  # 2 -> partyzancki sposób na zera na początku liczby ("01")
     temp = num
     while temp > 0:
-        binNum *= 10
-        binNum += temp % 2
+        bin_num *= 10
+        bin_num += temp % 2
         temp //= 2
-    binNum = binNum * 10 + 2
+    bin_num = bin_num * 10 + 2
 
     # sprawdzanie czy liczba jest palindromem w systemi binarnym
-    if reverse(binNum) == binNum:
-        binPal = True
+    if reverse(bin_num) == bin_num:
+        bin_pal = True
     else:
-        binPal = False
+        bin_pal = False
 
-    return (decPal, binPal)
+    return (dec_pal, bin_pal)

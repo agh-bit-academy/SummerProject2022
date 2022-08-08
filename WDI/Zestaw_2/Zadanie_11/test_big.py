@@ -1,12 +1,12 @@
 # Krzysztof Wysocki
 import pytest
 from ....readstdout import checkstdout
-from .prog import is_increasing_number as user_sol
-from .sol import is_increasing_number as corr_sol
+from .prog import f as user_sol
+from .sol import f as corr_sol
 from random import randint
 
-MIN_RANGEE = 10**1500
-MAX_RANGE = 10**20000
+MIN_RANGEE = 10 ** 1500
+MAX_RANGE = 10 ** 20000
 AMOUNT = 10
 TESTS = [randint(MIN_RANGEE, MAX_RANGE) for i in range(AMOUNT)]
 

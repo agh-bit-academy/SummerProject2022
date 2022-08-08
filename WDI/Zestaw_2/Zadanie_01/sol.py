@@ -4,12 +4,12 @@
 def f(num):
     a, b = 1, 1
     while a <= num:
-        tempA, tempB = a, b
+        temp_a, temp_b = a, b
 
-        while tempB <= num:
-            if a * tempB == num:
+        while temp_b <= num:
+            if a * temp_b == num:
                 return True
-            tempA, tempB = tempB, tempA + tempB
+            temp_a, temp_b = temp_b, temp_a + temp_b
 
         a, b = b, a + b
     return False

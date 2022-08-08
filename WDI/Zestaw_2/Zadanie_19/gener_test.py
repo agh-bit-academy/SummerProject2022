@@ -50,12 +50,12 @@ def check_given_len(seq, length):
     if n == length:
         return True
 
-    podseq = [seq[length * x:length * (x+1)] for x in range(n // length)]
+    podseq = [seq[length * x:length * (x + 1)] for x in range(n // length)]
     podseq.sort()
 
     j = 1
     while j < len(podseq):
-        if podseq[j-1] != podseq[j]:
+        if podseq[j - 1] != podseq[j]:
             return True
         j += 1
 

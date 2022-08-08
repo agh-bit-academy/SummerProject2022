@@ -3,11 +3,11 @@ def f(n):
     if n == 1:  # edge case
         print("NIE")
         return
-    sum = 1
-    for div in range(2, int(n**0.5)+1):
+    var_sum = 1
+    for div in range(2, int(n ** 0.5) + 1):
         if n % div == 0:
-            sum += div + n/div
-    if sum == n:
+            var_sum += div + (n / div)
+    if var_sum == n:
         print("TAK")
     else:
         print("NIE")

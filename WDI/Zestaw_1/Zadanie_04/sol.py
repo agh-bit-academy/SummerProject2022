@@ -1,12 +1,11 @@
 # Karol Sewiło
 def f(number):
-    sumNr = 0
+    sum_nr = 0
     i = 0
-    while sumNr < number:
+    while sum_nr < number:
         i += 1
-        sumNr += 2*i - 1
-    if sumNr == number:
+        sum_nr += (2 * i) - 1
+    if sum_nr == number:
         print(i)
-        return
     else:
         print(None)
