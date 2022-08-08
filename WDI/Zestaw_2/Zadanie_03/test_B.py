@@ -14,7 +14,7 @@ TEST_BIG = [randint(MID_RANGE, MAX_RANGE) for _ in range(NO_OF_TESTS)]
 
 @pytest.mark.order(2)
 @pytest.mark.dependency(name="test_B_s2t3", depends=["test_A_s2t3"], scope="session")
-class Test:
+class TestB:
     @pytest.mark.parametrize("arg", TEST_SMALL)
     def test_small(self, arg):
         assert user_sol(arg) == corr_sol(arg)
