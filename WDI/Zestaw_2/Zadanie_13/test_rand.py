@@ -12,6 +12,7 @@ BASIC_RANDOM_TESTS = [
     for _ in range(TEST_NUM)
 ]
 
+
 @pytest.mark.order(2)
 @pytest.mark.dependency(name="test_rand_s2t13", depends=["test_basic_s2t13"], scope="session")
 @pytest.mark.parametrize("data", BASIC_RANDOM_TESTS)
