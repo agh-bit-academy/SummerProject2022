@@ -7,9 +7,9 @@ MAX_TIME:
 3.0
 
 POINTS_PER_GROUP:
-10
-10
-10
+5
+3
+2
 
 TEST_RESULT:
 Time Exceeded
