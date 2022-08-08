@@ -1,8 +1,4 @@
 # Dominik Adamczyk
-# Rozwiązanie wystarczające na WDI, o złożoności O(n^2),
-# gdzie n to liczba cyfr po przecinku w zapisie dziesiętnym okresowym.
-# Rozwiązanie liniowe wymaga użycia zbiorów - zakazanych na WDI
-
 def f(a, b):
     print(a // b, end="")
     print(".", end="")
