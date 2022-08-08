@@ -16,6 +16,6 @@ def f(num):
         s += i
 
     if s == tmp:
-        print("TAK")
+        print(True)
     else:
-        print("NIE")
+        print(False)
