@@ -17,7 +17,6 @@ BASIC_RANDOM_TESTS = [
 
 @pytest.mark.order(1)
 @pytest.mark.dependency(name="test_basic_s1t12", scope="session")
-class TestBasic:
-    @pytest.mark.parametrize("data", BASIC_RANDOM_TESTS)
-    def test_basic(self, data):
-        assert checkstdout(user_sol, corr_sol, data, float_type=False)
+@pytest.mark.parametrize("data", BASIC_RANDOM_TESTS)
+def test_basic(self, data):
+    assert checkstdout(user_sol, corr_sol, data, float_type=False)
