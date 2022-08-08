@@ -1,10 +1,8 @@
 # Radek Niżnik
-
 import pytest
 from .prog import f as user_sol
 from .sol import f as corr_sol
 from random import randint
-
 
 MIN_RANGE = 2
 MAX_RANGE = 1000000
