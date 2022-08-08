@@ -7,7 +7,6 @@ from random import randint
 
 BASIC_TESTS = [[4], [9], [25], [1], [0], [-4], [-1], [-1234345], [3], [100]]
 
-
 MIN_RANGE = 0
 MAX_RANGE = 1000
 TEST_NUM = 90
