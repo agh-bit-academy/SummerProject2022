@@ -20,5 +20,5 @@ BASIC_RANDOM_TESTS = [
 @pytest.mark.order(1)
 @pytest.mark.dependency(name="test_basic_s2t2", scope="session")
 @pytest.mark.parametrize("tests", BASIC_RANDOM_TESTS)
-def test_basic(self, tests):
+def test_basic(tests):
     assert checkstdout(user_sol, corr_sol, tests)
