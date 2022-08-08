@@ -8,9 +8,9 @@ def f(n):
         if n % div == 0:
             var_sum += div + (n / div)
     if var_sum == n:
-        print("TAK")
+        print(True)
     else:
-        print("NIE")
+        print(False)
 
 # Poniżej funkcja wykorzystująca matematyczne właściwości liczb doskonałych
 # Odkomentuj to i zakomentuj poprzednią funkcję
