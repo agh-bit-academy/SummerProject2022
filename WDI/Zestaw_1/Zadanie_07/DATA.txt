@@ -1,0 +1,17 @@
+TEST_NUMBER:
+2
+
+MAX_TIME:
+1.0
+10.0
+
+POINTS_PER_GROUP:
+4
+6
+
+TEST_RESULT:
+Time Exceeded
+Complete previous tests
+
+SCORE:
+0
