@@ -12,7 +12,7 @@ BASIC_RANDOM_TESTS = [
     for _ in range(TEST_NUM)]
 
 
-class Test:
+class TestBasic:
     @pytest.mark.parametrize("data", BASIC_RANDOM_TESTS)
     def test_basic(self, data):
         assert user_sol(data) == corr_sol(data)
