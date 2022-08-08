@@ -1,5 +1,4 @@
 # Szczepan Rzeszutek
-
 def f(a, b, n):
     print(a // b, "." if a % b != 0 else "", sep="", end="")
     a %= b
