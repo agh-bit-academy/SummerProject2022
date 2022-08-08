@@ -3,3 +3,4 @@
 - [ ] Komentarz zawierający listę autorów dla niepustych plików
 - [ ] git pull --rebase
 - [ ] Uruchomienie pytest na testach
+- [ ] Order -> Dependency -> Parameterize
