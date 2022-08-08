@@ -1,5 +1,4 @@
 # Dominik Adamczyk
-
 def sum_of_digits(num):
     sum_num = 0
     while num != 0:
