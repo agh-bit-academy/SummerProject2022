@@ -12,7 +12,6 @@ TESTS = [randint(MIN_RANGEE, MAX_RANGE) for i in range(AMOUNT)]
 
 
 @pytest.mark.order(3)
-class TestBig:
-    @pytest.mark.parametrize("data", TESTS)
-    def test_basic(self, data):
-        assert checkstdout(user_sol, corr_sol, [data])
+@pytest.mark.parametrize("data", TESTS)
+def test_basic(data):
+    assert checkstdout(user_sol, corr_sol, [data])
