@@ -5,8 +5,7 @@ def f(number):
     c = 2
     while (a * b) <= number:
         if a * b == number:
-            return True
+            print(True)
         a, b = b, c
         c = a + b
-    return False
-    
+    print(False)
