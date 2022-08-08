@@ -19,7 +19,6 @@ BIG_RANDOM_TESTS = [
 
 @pytest.mark.order(2)
 @pytest.mark.dependency(name="test_big_random_s2t2", depends=["test_basic_s2t2"], scope="session")
-class TestBasic:
-    @pytest.mark.parametrize("tests", BIG_RANDOM_TESTS)
-    def test_basic(self, tests):
-        assert checkstdout(user_sol, corr_sol, tests)
+@pytest.mark.parametrize("tests", BIG_RANDOM_TESTS)
+def test_basic(tests):
+    assert checkstdout(user_sol, corr_sol, tests)
