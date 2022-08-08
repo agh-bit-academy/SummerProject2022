@@ -1,6 +1,4 @@
 # Krzysztof Mach
-
-
 def f(num):
     a, b = 1, 1
     while a <= num:
