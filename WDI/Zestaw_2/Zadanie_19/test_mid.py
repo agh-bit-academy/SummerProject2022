@@ -1,11 +1,9 @@
 # Paweł Konopka
-
 import pytest
 from .check import my_checkstdout
 from .gener_test import decode, gener_test, get_periodic_form
 from .prog import f as user_sol
 from random import randint
-
 
 # Test A
 INTEGER_MIN_LEN, INTEGER_MAX_LEN = 2, 5
