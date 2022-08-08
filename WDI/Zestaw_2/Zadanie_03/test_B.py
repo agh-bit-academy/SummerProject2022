@@ -4,7 +4,6 @@ from .prog import f as user_sol
 from .sol import f as corr_sol
 from random import randint
 
-
 NO_OF_TESTS = 100
 MIN_RANGE = 10 ** 4
 MID_RANGE = 10 ** 6
