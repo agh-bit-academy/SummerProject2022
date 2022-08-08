@@ -4,5 +4,6 @@ from .sol import e_number as corr_sol
 
 SET_PRECISION = 0.1 ** 6
 
+
 def test_e():
     assert abs(user_sol() - corr_sol()) < SET_PRECISION
