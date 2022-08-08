@@ -1,0 +1,20 @@
+TEST_NUMBER:
+3
+
+MAX_TIME:
+0.5
+1.0
+3.0
+
+POINTS_PER_GROUP:
+10
+10
+10
+
+TEST_RESULT:
+Program stopped by user
+Complete previous tests
+Complete previous tests
+
+SCORE:
+0
