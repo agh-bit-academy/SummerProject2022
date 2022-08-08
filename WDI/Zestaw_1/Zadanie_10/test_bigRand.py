@@ -13,7 +13,6 @@ BIG_RAND_TESTS = [[randint(MIN_RANGE, MAX_RANGE)] for _ in range(TEST_NUM)]
 
 @pytest.mark.order(2)
 @pytest.mark.dependency(name="test_big_rand_s1t10", depends=["test_basic_s1t10"], scope="session")
-class TestBig:
-    @pytest.mark.parametrize("data", BIG_RAND_TESTS)
-    def test_big_rand(self, data):
-        assert checkstdout(user_sol, corr_sol, data)
+@pytest.mark.parametrize("data", BIG_RAND_TESTS)
+def test_big_rand(data):
+    assert checkstdout(user_sol, corr_sol, data)
