@@ -14,7 +14,6 @@ BIG_RAND_TESTS = [
 
 @pytest.mark.order(3)
 @pytest.mark.dependency(name="test_big_rand_s2t1", depends=["test_small_rand_s2t1"], scope="session")
-class TestBig:
-    @pytest.mark.parametrize("data", BIG_RAND_TESTS)
-    def test_big_rand(self, data):
-        assert user_sol(data) == corr_sol(data)
+@pytest.mark.parametrize("data", BIG_RAND_TESTS)
+def test_big_rand(self, data):
+    assert user_sol(data) == corr_sol(data)
