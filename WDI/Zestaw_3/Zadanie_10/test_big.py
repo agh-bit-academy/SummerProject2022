@@ -12,9 +12,10 @@ LRANGE = -100000
 RRANGE = 100000
 MINDIFF = -5000
 MAXDIFF = 5000
+TESTNUM = 30
 
 BIG_RANDOM_TESTS = [gen_test_tab(LPIECESIZE, RPIECESIZE, NOPIECES, LRANGE, RRANGE, MINDIFF, MAXDIFF)
-                       for _ in range(30)]
+                       for _ in range(TESTNUM)]
 
 
 @pytest.mark.order(3)

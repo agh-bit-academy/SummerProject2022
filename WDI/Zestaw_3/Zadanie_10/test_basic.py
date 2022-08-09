@@ -22,12 +22,13 @@ LRANGE = -20
 RRANGE = 20
 MINDIFF = -5
 MAXDIFF = 5
+TESTNUM = 10
 
 BASIC_RANDOM_TESTS = [gen_test_tab(LPIECESIZE, RPIECESIZE, NOPIECES, LRANGE, RRANGE, MINDIFF, MAXDIFF)
-                      for _ in range(10)]
+                      for _ in range(TESTNUM)]
 
 EDGE_RANDOM_TESTS = [gen_arith_tab(randint(LPIECESIZE, RPIECESIZE), randint(LRANGE, RRANGE),
-                                   randint(MINDIFF, MAXDIFF)) for _ in range(10)]
+                                   randint(MINDIFF, MAXDIFF)) for _ in range(TESTNUM)]
 
 
 @pytest.mark.order(1)
