@@ -139,17 +139,5 @@ def run_all_tests():
                     run_unit_test(data_source, test_source)
 
 
-def menu():
-    action = 1
-
-    match action:
-        case 1:
-            run_all_tests()
-        case _:
-            return False
-
-    return False
-
-
 if __name__ == '__main__':
-    while menu(): pass
+    run_all_tests()
