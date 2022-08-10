@@ -1,7 +1,7 @@
 # Izabella Rosikoń
 
 
-def longest_subsequence(T):
+def f(T):
     count = 2
     save = 0
     for i in range(1, len(T)-2):
