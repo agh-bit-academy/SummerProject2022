@@ -11,4 +11,4 @@ def nww(a, b):
 
 
 def f(a, b, c):
-    return nww(nww(a, b), c)
+    print(nww(nww(a, b), c))
