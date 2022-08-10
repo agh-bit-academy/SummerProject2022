@@ -32,8 +32,6 @@ def gen_test_table(minPieceLen: int, maxPieceLen: int, noPieces: int, lRange: in
             output.append(tabRev)
         if option == 2:
             output.append(gen_palindromic_table(pieceLen, lRange, rRange))
-        if output[-1] == []:
-            print(option)
     shuffle(output)
     output = list(chain.from_iterable(output))
     return output
