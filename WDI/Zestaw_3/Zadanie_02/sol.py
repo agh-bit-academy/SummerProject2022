@@ -2,7 +2,7 @@
 import math
 
 
-def numbers_match(a, b):
+def f(a, b):
     lengthA = int(math.log10(a)) + 1
     lengthB = int(math.log10(b)) + 1
 
