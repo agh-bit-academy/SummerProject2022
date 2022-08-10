@@ -1,3 +1,5 @@
+# Dominik Adamczyk
+
 import pytest
 from .gen_helper import gen_test_table
 from .prog import f as user_sol
