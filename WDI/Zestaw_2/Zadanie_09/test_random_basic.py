@@ -5,9 +5,9 @@ from .sol import f as corr_sol
 from random import randint
 
 MIN_RANGE = 2
-MAX_RANGE = 1000000
-TEST_NUM = 90
-SET_PRECISION = 10 ** (-2)
+MAX_RANGE = 100000
+TEST_NUM = 10
+SET_PRECISION = 2 * 10 ** (-2)
 BASIC_RANDOM_TESTS = [
     randint(MIN_RANGE, MAX_RANGE)
     for _ in range(TEST_NUM)]
