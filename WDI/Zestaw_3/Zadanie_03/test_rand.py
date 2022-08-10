@@ -5,7 +5,7 @@ from .sol import f as corr_sol
 from random import randint
 
 MIN_RANGE = 10 ** 3
-MAX_RANGE = 10 ** 6
+MAX_RANGE = 10 ** 5
 TEST_NUM = 100
 TEST = [
     randint(MIN_RANGE, MAX_RANGE)
