@@ -13,7 +13,7 @@ def f(A):
             maxEl = A[i]
             maxCnt = 1
         elif A[i] == maxEl:
-            minCnt += 1
+            maxCnt += 1
         if A[i] < minEl:
             minEl = A[i]
             minCnt = 1
