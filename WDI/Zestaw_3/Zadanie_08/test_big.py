@@ -9,9 +9,8 @@ MIN_RANGE = 0
 MAX_RANGE = 10 ** 4
 LIST_RANGE = 10 ** 3
 TEST_NUM = 70
-FIXED = True
 BIG_RANDOM_TESTS = [
-    randArr.RandFixArray(LIST_RANGE, MIN_RANGE, MAX_RANGE, fixed=FIXED).get()
+    randArr.RandFixArray(LIST_RANGE, MIN_RANGE, MAX_RANGE).get()
     for _ in range(TEST_NUM)
 ]
 

@@ -16,9 +16,8 @@ MIN_RANGE = 0
 MAX_RANGE = 100
 LIST_RANGE = 50
 TEST_NUM = 25
-FIXED = True
 BASIC_RANDOM_TESTS = [
-    randArr.RandFixArray(LIST_RANGE, MIN_RANGE, MAX_RANGE, fixed=FIXED).get()
+    randArr.RandFixArray(LIST_RANGE, MIN_RANGE, MAX_RANGE).get()
     for _ in range(TEST_NUM)
 ]
 
