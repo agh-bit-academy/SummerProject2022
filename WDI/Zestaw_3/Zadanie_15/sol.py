@@ -1,4 +1,4 @@
-# Andrzej Karciński 
+# Andrzej Karciński
 
 def isPrime(x):
     if x < 2:
