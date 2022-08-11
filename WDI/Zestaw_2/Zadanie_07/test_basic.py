@@ -21,8 +21,8 @@ BASIC_RANDOM_TESTS = [
 class TestBasic:
     @pytest.mark.parametrize("data", BASIC_TESTS)
     def test_basic(self, data):
-        assert checkstdout(user_sol, corr_sol, [data])
+        assert user_sol(data) == corr_sol(data)
 
     @pytest.mark.parametrize("data", BASIC_RANDOM_TESTS)
     def test_basic_random(self, data):
-        assert checkstdout(user_sol, corr_sol, [data])
+        assert user_sol(data) == corr_sol(data)
