@@ -10,6 +10,7 @@ def isPrime(x):
         i += 1
     return True
 
+
 def f(array):
     a = 1
     b = 2
@@ -23,15 +24,12 @@ def f(array):
         if i == a:
             a, b = b, c
             c = a + b
-            if isPrime(array[i]) == True:
+            if isPrime(array[i]) is True:
                 return False
         else:
-            if isPrime(array[i]) == True:
+            if isPrime(array[i]) is True:
                 primeNumber = True
-    
+
     if primeNumber:
         return True
     return False
-#    0  1  2  3  4  5  6  7  8
-A = [4, 6, 10,8, 1, 6, 6, 5, 6]
-print(f(A))
