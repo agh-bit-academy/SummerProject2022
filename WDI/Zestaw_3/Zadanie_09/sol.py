@@ -1,7 +1,7 @@
 # Sebastian Soczawa
 def f(A):
     lenA = len(A)
-    if len == 0:
+    if lenA == 0:
         return 0
     maxLen = 1
     i = 0

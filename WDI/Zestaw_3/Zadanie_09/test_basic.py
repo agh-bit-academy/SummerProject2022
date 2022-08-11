@@ -16,9 +16,10 @@ EDGE_TESTS = [
 SIZE = 50
 LRANGE = -50
 RRANGE = 50
+TEST_NUM = 33
 
 BASIC_RANDOM_TESTS = [RandFixArray(SIZE, LRANGE, RRANGE).get()
-                      for _ in range(33)]
+                      for _ in range(TEST_NUM)]
 
 
 @pytest.mark.order(1)
