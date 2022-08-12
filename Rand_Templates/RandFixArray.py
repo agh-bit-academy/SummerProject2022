@@ -175,12 +175,14 @@ class RandFixArray():
         return [i ** other for i in self.__array]
 
     # int
-    def __rshift__(self, other):
-        pass
+    def __rshift__(self, other: int) -> list:
+        n = len(self.__array)
+        return [self.__array[(i - other) % n] for i in range(n)]
 
     # int
-    def __lshift__(self, other):
-        pass
+    def __lshift__(self, other: int) -> list:
+        n = len(self.__array)
+        return [self.__array[(i + other) % n] for i in range(n)]
 
     # Vector and int
     def __and__(self, other):
