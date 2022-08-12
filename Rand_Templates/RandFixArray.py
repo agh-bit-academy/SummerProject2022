@@ -96,42 +96,83 @@ class RandFixArray():
                 output += ", "
         return output
 
-    def __neg__(self):
-        pass
+    def __neg__(self) -> list:
+        return [-i for i in self.__array]
 
     def __pos__(self):
         pass
 
-    def __invert__(self):
-        pass
+    def __invert__(self) -> list:
+        return [i.__invert__ for i in self.__array]
 
     # Vector and int
-    def __add__(self, other):
-        pass
+    def __add__(self, other) -> list:
+        if type(other) is int:
+            return [i + other for i in self.__array]
+        elif type(other) is RandFixArray:
+            if len(self.__array) == len(other.__array):
+                return [self.__array[i] + other.__array[i] for i in range(len(self.__array))]
+            else:
+                raise ValueError('Vectors are of different lengths!')
+        else:
+            raise TypeError(f'Cannot add Vector to {type(other)}.')
 
     # Vector and int
-    def __sub__(self, other):
-        pass
+    def __sub__(self, other) -> list:
+        if type(other) is int:
+            return [i - other for i in self.__array]
+        elif type(other) is RandFixArray:
+            if len(self.__array) == len(other.__array):
+                return [self.__array[i] - other.__array[i] for i in range(len(self.__array))]
+            else:
+                raise ValueError('Vectors are of different lengths!')
+        else:
+            raise TypeError(f'Cannot subtract {type(other)} from Vector.')
 
     # Vector and int
-    def __mul__(self, other):
-        pass
+    def __mul__(self, other) -> list:
+        # Zakładam, że chodzi o mnożenie wyraz po wyrazie, w razie czego zmienię.
+        if type(other) is int:
+            return [i * other for i in self.__array]
+        elif type(other) is RandFixArray:
+            if len(self.__array) == len(other.__array):
+                return [self.__array[i] * other.__array[i] for i in range(len(self.__array))]
+            else:
+                raise ValueError('Vectors are of different lengths!')
+        else:
+            raise TypeError(f'Cannot multiply Vector and {type(other)}.')
 
     # Vector and int
-    def __truediv__(self, other):
-        pass
+    def __truediv__(self, other) -> list:
+        if type(other) is int:
+            return [i / other for i in self.__array]
+        elif type(other) is RandFixArray:
+            if len(self.__array) == len(other.__array):
+                return [self.__array[i] / other.__array[i] for i in range(len(self.__array))]
+            else:
+                raise ValueError('Vectors are of different lengths!')
+        else:
+            raise TypeError(f'Cannot divide Vector by {type(other)}.')
 
     # int
-    def __floordiv__(self, other):
-        pass
+    def __floordiv__(self, other) -> list:
+        if type(other) is int:
+            return [i // other for i in self.__array]
+        elif type(other) is RandFixArray:
+            if len(self.__array) == len(other.__array):
+                return [self.__array[i] // other.__array[i] for i in range(len(self.__array))]
+            else:
+                raise ValueError('Vectors are of different lengths!')
+        else:
+            raise TypeError(f'Cannot divide Vector by {type(other)}.')
 
     # int
-    def __mod__(self, other):
-        pass
+    def __mod__(self, other: int) -> list:
+        return [i % other for i in self.__array]
 
     # num
-    def __pow__(self, other):
-        pass
+    def __pow__(self, other) -> list:
+        return [i ** other for i in self.__array]
 
     # int
     def __rshift__(self, other):
