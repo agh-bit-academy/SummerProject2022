@@ -19,4 +19,4 @@ def f(A):
             maxDescendingLen = max(descLen, maxDescendingLen)
         else:
             i += 1
-    return abs(maxAscendingLen - maxDescendingLen)
+    return maxAscendingLen - maxDescendingLen
