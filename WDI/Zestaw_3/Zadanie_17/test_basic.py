@@ -14,6 +14,6 @@ BASIC_TESTS = [
 
 @pytest.mark.order(1)
 @pytest.mark.dependency(name="test_basic_s3t17", scope="session")
-@pytest.mark.parametrize("data", BASIC_TESTS)
-def test_basic(data):
-    assert corr_sol(data) == user_sol(data)
+@pytest.mark.parametrize("tab1, tab2", BASIC_TESTS)
+def test_basic(tab1, tab2):
+    assert corr_sol(tab1, tab2) == user_sol(tab1, tab2)
