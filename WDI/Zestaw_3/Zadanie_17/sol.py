@@ -1,4 +1,19 @@
 # Maciej Bartczak
+from math import sqrt
+
+
+def is_prime(x):
+    if x <= 1:
+        return False
+    factor = 2
+
+    while factor < int(sqrt(x)) + 1:
+        if x % factor == 0:
+            return False
+        factor += 1
+    return True
+
+
 def f(A, B):
     a_length = len(A)
     b_length = len(B)
@@ -25,11 +40,6 @@ def f(A, B):
         while index < max_length:
             result += longer[index]
             index += 1
-        is_prime = True
-        for divisor in range(2, result):
-            if result % divisor == 0:
-                is_prime = False
-                break
-        if is_prime:
+        if is_prime(result):
             valid_sum_counter += 1
     return valid_sum_counter
