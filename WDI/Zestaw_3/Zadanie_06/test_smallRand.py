@@ -15,6 +15,6 @@ TEST_RAND = [randint(MIN_RANGE, MAX_RANGE)
 @pytest.mark.dependency(name="test_smallRand_s3t06", scope="session")
 @pytest.mark.parametrize("data", TEST_RAND)
 def test_smallRand(data):
-    (user_array, user_state) = user_sol(data)
+    user_array, user_state = user_sol(data)
     corr_state = corr_sol(user_array)
     assert corr_state == user_state

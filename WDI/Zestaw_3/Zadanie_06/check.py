@@ -14,3 +14,4 @@ def f(array):
         if has_Odd(element) is False:
             return False
     return True
+    
