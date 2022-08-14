@@ -1,6 +1,5 @@
 # Maciej Sieniek
 import pytest
-from ....readstdout import checkstdout
 from .prog import f as user_sol
 from .sol import f as corr_sol
 from random import randint
@@ -18,4 +17,4 @@ TEST_RANDOM = [
 class Tests:
     @pytest.mark.parametrize("data", TEST_RANDOM)
     def test_random(self, data):
-        assert checkstdout(user_sol, corr_sol, [data])
+        assert user_sol(data) == corr_sol(data)
