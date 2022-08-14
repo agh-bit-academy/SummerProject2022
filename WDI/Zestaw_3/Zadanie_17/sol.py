@@ -3,14 +3,16 @@ from math import sqrt
 
 
 def is_prime(x):
-    if x <= 1:
+    if x == 2 or x == 3:
+        return True
+    if x < 2 or x % 2 == 0 or x % 3 == 0:
         return False
-    factor = 2
 
+    factor = 5
     while factor < int(sqrt(x)) + 1:
-        if x % factor == 0:
+        if x % factor == 0 or x % (factor + 2) == 0:
             return False
-        factor += 1
+        factor += 6
     return True
 
 
