@@ -23,6 +23,7 @@ for i in range(AMOUNT):
 
 
 @pytest.mark.order(1)
+@pytest.mark.dependency(name="test_small_s3t11", scope="session")
 @pytest.mark.parametrize("data", TESTS)
 def test_small(data):
     assert user_sol(data) == corr_sol(data)

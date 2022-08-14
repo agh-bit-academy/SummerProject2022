@@ -6,7 +6,7 @@ from random import shuffle
 from random import randint
 
 MIN_RANGEE = 10**3
-MAX_RANGE = 10**3
+MAX_RANGE = 10**3 + 100
 AMOUNT = 10
 
 
@@ -23,6 +23,9 @@ for i in range(AMOUNT):
 
 
 @pytest.mark.order(3)
+@pytest.mark.dependency(
+    name="test_big_s3t11", depends=["test_medium_s3t11"], scope="session"
+)
 @pytest.mark.parametrize("data", TESTS)
 def test_big(data):
     assert user_sol(data) == corr_sol(data)
