@@ -15,6 +15,12 @@ class RandFixArray():
         else:
             self.__array = RandFixArray.gen_random_fixed(v_size, l_range, r_range, rand_gen, v_seed)
 
+    @classmethod
+    def from_list(cls, arr: list):
+        instance = cls(0, 0, 0)
+        instance.__array = list
+        return instance
+
     def __iter__(self):
         self.index = 0
         return self
@@ -96,93 +102,93 @@ class RandFixArray():
                 output += ", "
         return output
 
-    def __neg__(self) -> list:
-        return [-i for i in self.__array]
+    def __neg__(self) -> 'RandFixArray':
+        return RandFixArray.from_list([-i for i in self.__array])
 
     def __pos__(self):
         pass
 
-    def __invert__(self) -> list:
-        return [i.__invert__ for i in self.__array]
+    def __invert__(self) -> 'RandFixArray':
+        return RandFixArray.from_list([i.__invert__ for i in self.__array])
 
     # Vector and int
-    def __add__(self, other) -> list:
+    def __add__(self, other) -> 'RandFixArray':
         if type(other) is int:
-            return [i + other for i in self.__array]
+            return RandFixArray.from_list([i + other for i in self.__array])
         elif type(other) is RandFixArray:
             if len(self.__array) == len(other.__array):
-                return [self.__array[i] + other.__array[i] for i in range(len(self.__array))]
+                return RandFixArray.from_list([self.__array[i] + other.__array[i] for i in range(len(self.__array))])
             else:
                 raise ValueError('Vectors are of different lengths!')
         else:
             raise TypeError(f'Cannot add Vector to {type(other)}.')
 
     # Vector and int
-    def __sub__(self, other) -> list:
+    def __sub__(self, other) -> 'RandFixArray':
         if type(other) is int:
-            return [i - other for i in self.__array]
+            return RandFixArray.from_list([i - other for i in self.__array])
         elif type(other) is RandFixArray:
             if len(self.__array) == len(other.__array):
-                return [self.__array[i] - other.__array[i] for i in range(len(self.__array))]
+                return RandFixArray.from_list([self.__array[i] - other.__array[i] for i in range(len(self.__array))])
             else:
                 raise ValueError('Vectors are of different lengths!')
         else:
             raise TypeError(f'Cannot subtract {type(other)} from Vector.')
 
     # Vector and int
-    def __mul__(self, other) -> list:
+    def __mul__(self, other) -> 'RandFixArray':
         # Zakładam, że chodzi o mnożenie wyraz po wyrazie, w razie czego zmienię.
         if type(other) is int:
-            return [i * other for i in self.__array]
+            return RandFixArray.from_list([i * other for i in self.__array])
         elif type(other) is RandFixArray:
             if len(self.__array) == len(other.__array):
-                return [self.__array[i] * other.__array[i] for i in range(len(self.__array))]
+                return RandFixArray.from_list([self.__array[i] * other.__array[i] for i in range(len(self.__array))])
             else:
                 raise ValueError('Vectors are of different lengths!')
         else:
             raise TypeError(f'Cannot multiply Vector and {type(other)}.')
 
     # Vector and int
-    def __truediv__(self, other) -> list:
+    def __truediv__(self, other) -> 'RandFixArray':
         if type(other) is int:
-            return [i / other for i in self.__array]
+            return RandFixArray.from_list([i / other for i in self.__array])
         elif type(other) is RandFixArray:
             if len(self.__array) == len(other.__array):
-                return [self.__array[i] / other.__array[i] for i in range(len(self.__array))]
+                return RandFixArray.from_list([self.__array[i] / other.__array[i] for i in range(len(self.__array))])
             else:
                 raise ValueError('Vectors are of different lengths!')
         else:
             raise TypeError(f'Cannot divide Vector by {type(other)}.')
 
     # int
-    def __floordiv__(self, other) -> list:
+    def __floordiv__(self, other) -> 'RandFixArray':
         if type(other) is int:
-            return [i // other for i in self.__array]
+            return RandFixArray.from_list([i // other for i in self.__array])
         elif type(other) is RandFixArray:
             if len(self.__array) == len(other.__array):
-                return [self.__array[i] // other.__array[i] for i in range(len(self.__array))]
+                return RandFixArray.from_list([self.__array[i] // other.__array[i] for i in range(len(self.__array))])
             else:
                 raise ValueError('Vectors are of different lengths!')
         else:
             raise TypeError(f'Cannot divide Vector by {type(other)}.')
 
     # int
-    def __mod__(self, other: int) -> list:
-        return [i % other for i in self.__array]
+    def __mod__(self, other: int) -> 'RandFixArray':
+        return RandFixArray.from_list([i % other for i in self.__array])
 
     # num
-    def __pow__(self, other) -> list:
-        return [i ** other for i in self.__array]
+    def __pow__(self, other) -> 'RandFixArray':
+        return RandFixArray.from_list([i ** other for i in self.__array])
 
     # int
-    def __rshift__(self, other: int) -> list:
+    def __rshift__(self, other: int) -> 'RandFixArray':
         n = len(self.__array)
-        return [self.__array[(i - other) % n] for i in range(n)]
+        return RandFixArray.from_list([self.__array[(i - other) % n] for i in range(n)])
 
     # int
-    def __lshift__(self, other: int) -> list:
+    def __lshift__(self, other: int) -> 'RandFixArray':
         n = len(self.__array)
-        return [self.__array[(i + other) % n] for i in range(n)]
+        return RandFixArray.from_list([self.__array[(i + other) % n] for i in range(n)])
 
     # Vector and int
     def __and__(self, other):
