@@ -1,25 +1,25 @@
 # Mikołaj Maślak
 def f(A):
-    maxAscLen = 0
-    ascLen = 0
-    maxDescLen = 0
-    descLen = 0
+    max_asc_len = 0
+    asc_len = 0
+    max_desc_len = 0
+    desc_len = 0
     prev = 0
     for i in range(1, len(A)):
         diff = A[i] - A[i - 1]
         if diff > 0:
             if diff == prev:
-                ascLen += 1
+                asc_len += 1
             else:
-                ascLen = 2
-                descLen = 0
+                asc_len = 2
+                desc_len = 0
         elif diff < 0:
             if diff == prev:
-                descLen += 1
+                desc_len += 1
             else:
-                descLen = 2
-                ascLen = 0
-        maxAscLen = max(maxAscLen, ascLen)
-        maxDescLen = max(maxDescLen, descLen)
+                desc_len = 2
+                asc_len = 0
+        max_asc_len = max(max_asc_len, asc_len)
+        max_desc_len = max(max_desc_len, desc_len)
         prev = diff
-    return maxAscLen - maxDescLen
+    return max_asc_len - max_desc_len

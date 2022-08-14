@@ -15,7 +15,7 @@ MAXDIFF = 5000
 TESTNUM = 30
 
 BIG_RANDOM_TESTS = [gen_test_tab(LPIECESIZE, RPIECESIZE, NOPIECES, LRANGE, RRANGE, MINDIFF, MAXDIFF)
-                       for _ in range(TESTNUM)]
+                    for _ in range(TESTNUM)]
 
 
 @pytest.mark.order(3)

@@ -11,8 +11,8 @@ def are_all_digits_odd(a) -> bool:
 
 
 def f(n) -> tuple:
-    A = [randint(1, 1000) for _ in range(n)]
-    for number in A:
+    output_tab = [randint(1, 1000) for _ in range(n)]
+    for number in output_tab:
         if are_all_digits_odd(number):
-            return A, True
-    return A, False
+            return output_tab, True
+    return output_tab, False

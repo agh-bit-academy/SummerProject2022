@@ -3,25 +3,25 @@ import math
 
 
 def f(a, b):
-    lengthA = int(math.log10(a)) + 1
-    lengthB = int(math.log10(b)) + 1
+    length_a = int(math.log10(a)) + 1
+    length_b = int(math.log10(b)) + 1
 
-    listA = [0] * lengthA
-    listB = [0] * lengthB
+    list_a = [0] * length_a
+    list_b = [0] * length_b
 
-    if lengthA != lengthB:
+    if length_a != length_b:
         return False
     else:
-        for j in range(lengthB):
-            listA[j] = a % 10
-            listB[j] = b % 10
+        for j in range(length_b):
+            list_a[j] = a % 10
+            list_b[j] = b % 10
             a = a // 10
             b = b // 10
     tab = [0] * 10
 
-    for item in listA:
+    for item in list_a:
         tab[item] = tab[item] + 1
-    for jtem in listB:
+    for jtem in list_b:
         tab[jtem] = tab[jtem] - 1
 
     return tab == [0] * 10

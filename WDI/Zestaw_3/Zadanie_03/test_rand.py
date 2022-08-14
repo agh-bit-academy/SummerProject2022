@@ -11,6 +11,7 @@ TEST = [
     randint(MIN_RANGE, MAX_RANGE)
     for _ in range(TEST_NUM)]
 
+
 @pytest.mark.parametrize("data", TEST)
 def test_rand(data):
     assert user_sol(data) == corr_sol(data)
