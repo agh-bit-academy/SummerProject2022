@@ -1,20 +1,18 @@
 # Dominik Adamczyk
-# O(tabLen ^ 2)
-
 def f(tab):
-    maxLen = 0
-    tabLen = len(tab)
-    for i in range(0, tabLen):
-        sumOfIndex = 0
-        sumOfDigits = 0
-        currLen = 0
-        for j in range(i, tabLen):
+    max_len = 0
+    tab_len = len(tab)
+    for i in range(0, tab_len):
+        sum_of_index = 0
+        sum_of_digits = 0
+        curr_len = 0
+        for j in range(i, tab_len):
             if j != i and tab[j - 1] >= tab[j]:
                 break
-            sumOfIndex += j
-            sumOfDigits += tab[j]
-            currLen += 1
-            if sumOfDigits == sumOfIndex:
-                maxLen = max(currLen, maxLen)
+            sum_of_index += j
+            sum_of_digits += tab[j]
+            curr_len += 1
+            if sum_of_digits == sum_of_index:
+                max_len = max(curr_len, max_len)
 
-    return maxLen
+    return max_len

@@ -1,6 +1,5 @@
 # Andrzej Karciński
-
-def isPrime(x):
+def is_prime(x):
     if x < 2:
         return False
     i = 2
@@ -15,21 +14,21 @@ def f(array):
     a = 1
     b = 2
     c = 3
-    primeNumber = False
+    prime_number = False
 
-    if isPrime(array[0]):
+    if is_prime(array[0]):
         return False
 
     for i in range(len(array)):
         if i == a:
             a, b = b, c
             c = a + b
-            if isPrime(array[i]) is True:
+            if is_prime(array[i]) is True:
                 return False
         else:
-            if isPrime(array[i]) is True:
-                primeNumber = True
+            if is_prime(array[i]) is True:
+                prime_number = True
 
-    if primeNumber:
+    if prime_number:
         return True
     return False

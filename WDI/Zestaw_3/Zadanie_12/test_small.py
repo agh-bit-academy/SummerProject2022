@@ -2,7 +2,7 @@
 import pytest
 from .prog import f as user_sol
 from .sol import f as corr_sol
-from .seq_generator import generateTest
+from .seq_generator import generate_test
 
 MIN_RANGE = 0
 MAX_RANGE = 20
@@ -11,7 +11,7 @@ SEQ_AMMOUNT = 10
 TUPLE_LEN = 30
 TEST_NUM = 50
 SMALL_RANDOM_TESTS = [
-    generateTest(MIN_RANGE, MAX_RANGE, TUPLE_LEN, ARITHMETIC_RANGE, SEQ_AMMOUNT)
+    generate_test(MIN_RANGE, MAX_RANGE, TUPLE_LEN, ARITHMETIC_RANGE, SEQ_AMMOUNT)
     for _ in range(TEST_NUM)]
 
 SMALL_TESTS = [

@@ -1,15 +1,14 @@
 # Andrzej Karciński
-
 def f(n):
-    isPrime = [True for _ in range(n)]
-    isPrime[0] = False
-    isPrime[1] = False
-    numOfPrimes = 0
+    is_prime = [True for _ in range(n)]
+    is_prime[0] = False
+    is_prime[1] = False
+    num_of_primes = 0
     for i in range(2, n):
-        if isPrime[i]:
-            numOfPrimes += 1
+        if is_prime[i]:
+            num_of_primes += 1
             # warto zauważyć, że jeżeli i to liczba pierwsza to sitem eliminujemy jej wielokrotności stąd step = i,
             # oraz zaczynamy eliminację od 2 * i
             for j in range(i + i, n, i):
-                isPrime[j] = False
-    return numOfPrimes
+                is_prime[j] = False
+    return num_of_primes

@@ -1,13 +1,12 @@
 # Dominik Adamczyk
-
 def f(A):
     for el in A:
-        areDigitsOdd = True
+        are_digits_odd = True
         while el != 0:
             if el % 2 == 0:
-                areDigitsOdd = False
+                are_digits_odd = False
                 break
             el //= 10
-        if areDigitsOdd:
+        if are_digits_odd:
             return True
     return False
