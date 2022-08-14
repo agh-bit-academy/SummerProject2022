@@ -1,5 +1,6 @@
 # Krzysztof Wysocki
 import pytest
+from ....readstdout import checkstdout
 from .prog import f as user_sol
 from .sol import f as corr_sol
 from random import randint
@@ -19,6 +20,6 @@ TESTS = [
 
 
 @pytest.mark.order(3)
-@pytest.mark.parametrize("a, b, c", TESTS)
+@pytest.mark.parametrize("a,b,c", TESTS)
 def test_big(a, b, c):
-    assert user_sol(a, b, c) == corr_sol(a, b, c)
+    assert checkstdout(user_sol, corr_sol, [a, b, c])

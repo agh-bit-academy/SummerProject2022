@@ -1,6 +1,8 @@
 # Radek Niżnik
-from math import log
-
 
 def f(n):
-    return log(n) - log(1)
+    surface = 0
+    step = (n - 1) / 10000000
+    for i in range(10000001):
+        surface += step / (1 + i * step)
+    return surface
