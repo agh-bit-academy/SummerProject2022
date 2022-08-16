@@ -1,4 +1,5 @@
-# Izabella Rosikoń, Maciej Bartczak
+# Maciej Bartczak
+# Izabella Rosikoń
 import math
 
 
