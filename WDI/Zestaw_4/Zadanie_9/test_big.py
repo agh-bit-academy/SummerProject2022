@@ -22,7 +22,6 @@ BIG_RANDOM_TESTS = [(RandFixMatrix(MATRIX_RANDOM_SIZE[i], MATRIX_RANDOM_SIZE[i],
 
 @pytest.mark.order(2)
 @pytest.mark.dependency(name='test_big_s4t9', depends=['test_basic_s4t9'], scope='session')
-class TestBasic:
-    @pytest.mark.parametrize('array, k', BIG_RANDOM_TESTS)
-    def test_random_basic(self, array, k):
-        assert user_sol(array, k) == corr_sol(array, k)
+@pytest.mark.parametrize('array, k', BIG_RANDOM_TESTS)
+def test_random_basic(array, k):
+    assert user_sol(array, k) == corr_sol(array, k)
