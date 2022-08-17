@@ -1,4 +1,4 @@
-from RandFixArray import RandFixArray as Rfarr
+from .RandFixArray import RandFixArray as Rfarr
 
 from ._empty_num import Num
 from random import seed, randint
