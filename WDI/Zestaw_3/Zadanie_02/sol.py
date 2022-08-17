@@ -1,3 +1,4 @@
+# Maciej Bartczak
 # Izabella Rosikoń
 import math
 
@@ -6,22 +7,18 @@ def f(a, b):
     length_a = int(math.log10(a)) + 1
     length_b = int(math.log10(b)) + 1
 
-    list_a = [0] * length_a
-    list_b = [0] * length_b
-
     if length_a != length_b:
         return False
-    else:
-        for j in range(length_b):
-            list_a[j] = a % 10
-            list_b[j] = b % 10
-            a = a // 10
-            b = b // 10
-    tab = [0] * 10
 
-    for item in list_a:
-        tab[item] = tab[item] + 1
-    for jtem in list_b:
-        tab[jtem] = tab[jtem] - 1
+    digit_counter = [0 for _ in range(10)]
 
-    return tab == [0] * 10
+    for _ in range(length_a):
+        digit_counter[a % 10] += 1
+        a //= 10
+        digit_counter[b % 10] -= 1
+        b //= 10
+
+    for count in digit_counter:
+        if count != 0:
+            return False
+    return True
