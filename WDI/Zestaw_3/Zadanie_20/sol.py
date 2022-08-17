@@ -1,3 +1,4 @@
+# Karol Sewiło
 def f(t):
     n = len(t)
     array_of_divisors = [divisors(t[i]) for i in range(n)]
