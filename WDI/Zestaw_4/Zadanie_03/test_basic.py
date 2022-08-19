@@ -1,7 +1,7 @@
 # Szymon Ożóg
 import pytest
-from prog import f as user_sol
-from sol import f as correct_sol
+from .prog import f as user_sol
+from .sol import f as correct_sol
 
 BASIC_TESTS = [([[]]), ([[0]]), ([[2, 2]]), ([[1, 1], [2, 3], [9, 3]]), ([[-2, 5], [-7, 1]])]
 

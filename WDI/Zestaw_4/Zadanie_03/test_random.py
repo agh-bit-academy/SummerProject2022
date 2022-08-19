@@ -1,7 +1,7 @@
 # Szymon Ożóg
 import pytest
-from prog import f as user_sol
-from sol import f as correct_sol
+from .prog import f as user_sol
+from .sol import f as correct_sol
 from random import randint
 from ....Rand_Templates.RandFixMatrix import RandFixMatrix
 
@@ -12,7 +12,8 @@ TABLE_SIZE_MIN = 3
 TABLE_SIZE_MAX = 10
 
 # Nie testowanie, nie wiem czy działa
-RANDOM_TESTS = [(RandFixMatrix(randint(TABLE_SIZE_MIN, TABLE_SIZE_MAX), randint(TABLE_SIZE_MIN, TABLE_SIZE_MAX), LOWER_BOUND, UPPER_BOUND).get()) for i in range(TEST_CASE_AMOUNT)]
+RANDOM_TESTS = [(RandFixMatrix(randint(TABLE_SIZE_MIN, TABLE_SIZE_MAX), randint(TABLE_SIZE_MIN, TABLE_SIZE_MAX), LOWER_BOUND,
+UPPER_BOUND).get()) for i in range(TEST_CASE_AMOUNT)]
 
 
 @pytest.mark.order(2)

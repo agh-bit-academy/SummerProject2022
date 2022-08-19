@@ -4,7 +4,7 @@ def check_number(number):
     while number != 0:
         if number % 2 == 0:
             return True
-        number /= 10
+        number //= 10
     return False
 
 
