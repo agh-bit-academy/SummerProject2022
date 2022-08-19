@@ -12,8 +12,7 @@ TEST_BIG = [[RandFixArray(SIZE, START, END).get() for _ in range(SIZE)] for _ in
 
 
 @pytest.mark.order(2)
-@pytest.mark.dependency(name="test_big_s4t15", scope="session")
-class TestBig:
-    @pytest.mark.parametrize("data", TEST_BIG)
-    def test_basic(self, data):
-        assert user_sol(data) == corr_sol(data)
+@pytest.mark.dependency(name="test_big_s4t15",depends=["test_basic_s4t15"] scope="session")
+@pytest.mark.parametrize("data", TEST_BIG)
+def test_big(self, data):
+    assert user_sol(data) == corr_sol(data)
