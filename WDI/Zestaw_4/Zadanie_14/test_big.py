@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+# Dominik Adamczyk
+
+>>>>>>> fd753a2 (Done s4t14 test + update sol.py)
 import pytest
 from .prog import f as user_sol
 from .sol import f as corr_sol
