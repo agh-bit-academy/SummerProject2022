@@ -10,10 +10,8 @@ LOWER_BOUND = -1000
 UPPER_BOUND = 1000
 TABLE_SIZE_MIN = 3
 TABLE_SIZE_MAX = 10
-
-# Nie testowanie, nie wiem czy działa
-RANDOM_TESTS = [(RandFixMatrix(randint(TABLE_SIZE_MIN, TABLE_SIZE_MAX), randint(TABLE_SIZE_MIN, TABLE_SIZE_MAX), LOWER_BOUND,
-UPPER_BOUND).get()) for i in range(TEST_CASE_AMOUNT)]
+RANDOM_TESTS = [(RandFixMatrix(randint(TABLE_SIZE_MIN, TABLE_SIZE_MAX), randint(TABLE_SIZE_MIN, TABLE_SIZE_MAX),
+                 LOWER_BOUND, UPPER_BOUND).get()) for i in range(TEST_CASE_AMOUNT)]
 
 
 @pytest.mark.order(2)
