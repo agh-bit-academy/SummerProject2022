@@ -20,8 +20,8 @@ def f(A, B):
     onesb = convert(B)
     lena = len(A)
     lenb = len(B)
-    for yb in range(lenb - lena):
-        for xb in range(lenb - lena):
+    for yb in range(lenb - lena + 1):
+        for xb in range(lenb - lena + 1):
             count = 0
             for ya in range(lena):
                 for xa in range(lena):
