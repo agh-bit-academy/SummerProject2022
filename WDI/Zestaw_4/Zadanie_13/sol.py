@@ -37,5 +37,3 @@ def f(A):
             if not flag:
                 A[i][j] = 0
     return A
-tab = [[2, 4], [2, 2]]
-print(f(tab))
