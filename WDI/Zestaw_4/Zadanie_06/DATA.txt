@@ -1,0 +1,20 @@
+TEST_NUMBER:
+3
+
+MAX_TIME:
+0.5
+0.6
+2
+
+POINTS_PER_GROUP:
+10
+10
+10
+
+TEST_RESULT:
+Time Exceeded
+Time Exceeded
+Time Exceeded
+
+SCORE:
+0
