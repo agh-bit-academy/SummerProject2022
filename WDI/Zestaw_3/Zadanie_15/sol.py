@@ -23,12 +23,10 @@ def f(array):
         if i == a:
             a, b = b, c
             c = a + b
-            if is_prime(array[i]) is True:
+            if is_prime(array[i]):
                 return False
         else:
-            if is_prime(array[i]) is True:
+            if is_prime(array[i]):
                 prime_number = True
 
-    if prime_number:
-        return True
-    return False
+    return prime_number
