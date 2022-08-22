@@ -1,5 +1,6 @@
 # Juliusz Wasieleski
 def find_longest_sec(tab, row, col):
+    EPS = 10 ** -6
     n = len(tab)
     m = len(tab[0])
     if row >= n or col >= m:
@@ -13,7 +14,7 @@ def find_longest_sec(tab, row, col):
     leng = 1
     q = tab[row][col] / tab[row + 1][col + 1]
     while row + 1 < n and col + 1 < m:
-        if tab[row][col] == tab[row + 1][col + 1] * q:
+        if abs(tab[row][col] - tab[row + 1][col + 1] * q) < EPS:
             row += 1
             col += 1
             leng += 1
@@ -22,9 +23,7 @@ def find_longest_sec(tab, row, col):
                 max_leng = leng
             leng = 1
             q = tab[row][col] / tab[row + 1][col + 1]
-            row += 1
-            col += 1
-    return max_leng
+    return max(max_leng, leng)
 
 
 def f(tab):

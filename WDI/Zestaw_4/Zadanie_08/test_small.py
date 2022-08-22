@@ -11,14 +11,26 @@ TEST_BASIC = [[[]],
               [[1, 2],
                [5, 1]],
               [[1, 3, 3],
-               [3, 3, 6]
+               [3, 3, 6],
                [3, 3, 9]],
               [[1, 4, 3, 6],
                [3, 2, 5, 4],
                [5, 9, 23, 8],
-               [9, 27, 4, 1]]
+               [9, 4, 27, 1]],
+              [[1, 625, 1, 1, 1],
+               [1, 1, 125, 1, 1],
+               [1, 1, 1, 25, 1],
+               [1, 1, 1, 1, 5],
+               [1, 1, 1, 1, 1]],
+              [[2, 1, 1, 1, 1, 1, 2],
+               [1, 4, 1, 1, 1, 2, 2],
+               [1, 1, 8, 1, 2, 2, 1],
+               [1, 1, 2, 2, 2, 1, 1],
+               [1, 1, 2, 2, 4, 1, 1],
+               [1, 2, 3, 2, 1, 8, 1],
+               [2, 3, 1, 2, 1, 1, 16]]]
 
-              TEST_NUM = 20
+TEST_NUM = 20
 L_BOUND = 1
 R_BOUND = 10
 MIN_NUM = 1
@@ -27,12 +39,11 @@ MAX_NUM = 10 ** 2
 ROWS_LENGTH = RandArr(TEST_NUM, L_BOUND, R_BOUND)
 
 SMALL_RAND_TESTS = [[RandArr(ROWS_LENGTH[i], MIN_NUM, MAX_NUM).get()
-                     for _ in range(randint(L_BOUND, R_BOUND))] for i in range(TEST_NUM)] \
-
-                   @ pytest.mark.order(1) \
-                   @ pytest.mark.dependency(name='test_small_s4t8', scope='session')
+                     for _ in range(randint(L_BOUND, R_BOUND))] for i in range(TEST_NUM)]
 
 
+@pytest.mark.order(1)
+@pytest.mark.dependency(name='test_small_s4t8', scope='session')
 class TestSmall:
     @pytest.mark.parametrize('data', TEST_BASIC)
     def test_basic(self, data):
