@@ -30,7 +30,6 @@ def f(A):
                     if A[y][x] == 0 or (i == y and j == x):
                         continue
                     act_num = A[i][j] + A[y][x]
-                    print(act_num)
                     if is_prime(act_num):
                         flag = True
                         break
