@@ -32,5 +32,3 @@ def rec(tab, i=0, s1=0, s2=0, s3=0):
         return s1 == s2 and s2 == s3
     return rec(tab, i + 1, s1 + tab[i], s2, s3) or rec(tab, i + 1, s1, s2 + tab[i], s3)\
          or rec(tab, i + 1, s1, s2, s3 + tab[i])
-
-print(f([4, 5, 8, 2, 6, 3, 8]))
