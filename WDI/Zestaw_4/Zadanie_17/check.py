@@ -50,4 +50,4 @@ def check(A):
                 output.append((x, y))
     if output == []:
         return [(0, 0)]
-    return output, maxsum
+    return output
