@@ -2,6 +2,7 @@
 # Funkcja zwraca najmniejszą, ze wszystkich możliwych odpowiedzi.
 # Inne implementacje mogą dawać różne wyniki, zgodne z treścią zadania.
 # Na przykład dla tablicy t = [0, 1, 2] możliwe wyniki to: 0, 1, 2, 3. f(t) zwróci 0
+# Jeżeli odpowiedź nie istnieje funkcja zwraca None
 
 def f(A):
     def rec(A, idx=0, idxsum=0, tabsum=0, emptyans=True):
