@@ -2,7 +2,7 @@
 import pytest
 from ....Rand_Templates.RandFixArray import RandFixArray
 from .prog import f as user_sol
-from .sol import f as corr_sol
+from .check import check
 
 
 SIZE = 50
@@ -17,4 +17,4 @@ SMALL_RANDOM_TESTS = [[RandFixArray(SIZE, LRANGE, RRANGE).get() for _ in range(S
 @pytest.mark.dependency(name="test_small_s4t17", depends=["test_basic_s4t17"], scope="session")
 @pytest.mark.parametrize("data", SMALL_RANDOM_TESTS)
 def test_small_random(data):
-    assert user_sol(data) == corr_sol(data)
+    assert user_sol(data) in check(data)
