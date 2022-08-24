@@ -2,12 +2,12 @@
 import pytest
 from ....Rand_Templates.RandFixArray import RandFixArray
 from .prog import f as user_sol
-from .sol import f as corr_sol
+from .check import check
 
 
 BASIC_TESTS = [
     [[1]],
-    [[2, 2], [2, 2]]
+    [[2, 2], [2, 2]],
     [[1, 2, 3], [4, 5, 6], [8, 9, 10]],
     [[6, 6, 6], [6, 6, 6], [6, 6, 6]],
     [[1, 5, 5, 5], [1, 5, 1, 5], [1, 5, 5, 5], [1, 1, 1, 1]],
@@ -28,8 +28,8 @@ BASIC_RANDOM_TESTS = [[RandFixArray(SIZE_ROW, LRANGE, RRANGE).get() for _ in ran
 class TestBasic:
     @pytest.mark.parametrize("data", BASIC_TESTS)
     def test_basic(self, data):
-        assert user_sol(data) == corr_sol(data)
+        assert user_sol(data) in check(data)
 
     @pytest.mark.parametrize("data", BASIC_RANDOM_TESTS)
     def test_basic_random(self, data):
-        assert user_sol(data) == corr_sol(data)
+        assert user_sol(data) in check(data)
