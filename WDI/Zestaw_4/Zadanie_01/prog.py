@@ -6,8 +6,8 @@ def f(A):
     row, column = 0, -1
     size_m = m
     size_n = n
-    while size_m > 1 or size_n > 1:
-        for _ in range(size_m): 
+    while counter < n * m:
+        for _ in range(size_m):
             counter += 1
             column += 1
             A[row][column] = counter
@@ -33,5 +33,4 @@ def f(A):
             row -= 1
             A[row][column] = counter
         size_m -= 1
-
     return A
