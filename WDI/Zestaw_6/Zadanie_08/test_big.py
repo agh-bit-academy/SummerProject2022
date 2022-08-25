@@ -19,5 +19,5 @@ TEST_BIG = [(RandFixArray(randint(MIN_SIZE, MAX_SIZE), LLRANGE, RRANGE).get(), W
 @pytest.mark.order(2)
 @pytest.mark.dependency(name='test_big_s6t8', depends=['test_basic_s6t8'], scope='session')
 @pytest.mark.parametrize('data', TEST_BIG)
-def test_small_rand(data):
+def test_big_rand(data):
     assert user_sol(data[0], data[1]) == corr_sol(data[0], data[1])
