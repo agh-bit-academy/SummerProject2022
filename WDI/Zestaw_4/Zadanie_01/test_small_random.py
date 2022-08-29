@@ -5,7 +5,7 @@ from random import randint
 from ....Rand_Templates.RandFixMatrix import RandFixMatrix
 from .prog import f as user_sol
 from .sol import f as corr_sol
-1
+
 
 VAL = 0
 
