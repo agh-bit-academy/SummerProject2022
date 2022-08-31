@@ -19,7 +19,7 @@ TEST_SMALL = [(RandFixArray(randint(MIN_SIZE, MAX_SIZE), LLRANGE, RRANGE).get(),
 
 
 @pytest.mark.order(1)
-@pytest.mark.dependency(name='test_basic_s6t8', scope='sessiion')
+@pytest.mark.dependency(name='test_basic_s6t8', scope='session')
 class TestBasic:
     @pytest.mark.parametrize('data', TEST_BASIC)
     def test_basic(self, data):
