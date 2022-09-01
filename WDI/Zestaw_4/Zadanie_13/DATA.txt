@@ -7,9 +7,9 @@ MAX_TIME:
 5.0
 
 POINTS_PER_GROUP:
-4.0
-5.0
-1.0
+4
+5
+1
 
 TEST_RESULT:
 OK
