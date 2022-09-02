@@ -9,7 +9,7 @@ TEST_NUM = 20
 MIN_SIZE = 10
 MAX_SIZE = 15
 LLRANGE = 1
-RRANGE = 10**5
+RRANGE = 10 ** 5
 
 WEIGHTS = RandFixArray(TEST_NUM, LLRANGE, RRANGE).get()
 
@@ -20,4 +20,4 @@ TEST_BIG = [(RandFixArray(randint(MIN_SIZE, MAX_SIZE), LLRANGE, RRANGE).get(), W
 @pytest.mark.dependency(name='test_big_s6t9', depends=['test_basic_s6t9'], scope='session')
 @pytest.mark.parametrize('data', TEST_BIG)
 def test_big_rand(data):
-    assert user_sol(data[0], data[1]) == corr_sol(data[0], data[1])
+    assert sorted(user_sol(data[0], data[1])) == sorted(corr_sol(data[0], data[1]))

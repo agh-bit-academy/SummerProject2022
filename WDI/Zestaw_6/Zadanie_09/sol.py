@@ -4,7 +4,7 @@ def f(tab, k):
     weights = []
     for weight in tab:
         summ += weight
-        weights.append(weight)
+        weights += [weight]
         if summ == k:
             return weights
         elif summ > k:
@@ -22,6 +22,5 @@ def rek(A, weights, left, right=0, i=0):
         return False
     tmp_bool = rek(A, weights, left, right + A[i], i + 1) or rek(A, weights, left + A[i], right, i + 1)
     if tmp_bool:
-        weights.append(A[i])
+        weights += [A[i]]
     return tmp_bool or rek(A, weights, left, right, i + 1)
-

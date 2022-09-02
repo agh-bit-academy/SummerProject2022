@@ -27,12 +27,12 @@ TEST_SMALL = [(RandFixArray(randint(MIN_SIZE, MAX_SIZE), LLRANGE, RRANGE).get(),
 
 
 @pytest.mark.order(1)
-@pytest.mark.dependency(name='test_basic_s6t9', scope='sessiion')
+@pytest.mark.dependency(name='test_basic_s6t9', scope='session')
 class TestBasic:
     @pytest.mark.parametrize('data', TEST_BASIC)
     def test_basic(self, data):
-        assert user_sol(data[0], data[1]) == corr_sol(data[0], data[1])
+        assert sorted(user_sol(data[0], data[1])) == sorted(corr_sol(data[0], data[1]))
 
     @pytest.mark.parametrize('data', TEST_SMALL)
     def test_small_rand(self, data):
-        assert user_sol(data[0], data[1]) == corr_sol(data[0], data[1])
+        assert sorted(user_sol(data[0], data[1])) == sorted(corr_sol(data[0], data[1]))
