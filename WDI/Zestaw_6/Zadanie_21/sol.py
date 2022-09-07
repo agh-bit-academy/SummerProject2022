@@ -1,3 +1,4 @@
+# Juliusz Wasieleski
 def rek(tab, row, curr_sum, sum, not_empty, columns):
     n = len(tab)
     m = len(tab[0])
