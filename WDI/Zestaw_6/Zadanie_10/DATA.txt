@@ -1,23 +1,17 @@
 TEST_NUMBER:
-n
+2
 
 MAX_TIME:
-float
-float
-...
-float
+0.5
+2.0
 
 POINTS_PER_GROUP:
-int
-int
-...
-int
+5
+15
 
 TEST_RESULT:
-str
-str
-...
-str
+ok
+ok
 
 SCORE:
-int
+0
