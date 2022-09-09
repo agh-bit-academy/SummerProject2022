@@ -4,7 +4,6 @@ from ....Rand_Templates.RandFixArray import RandFixArray
 from .prog import f as user_sol
 from .sol import f as corr_sol
 
-
 SIZE = 100
 LRANGE = 0
 RRANGE = 10 ** 6
