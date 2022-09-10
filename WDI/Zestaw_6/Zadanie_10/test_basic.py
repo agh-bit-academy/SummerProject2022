@@ -22,6 +22,7 @@ TEST_BASIC = [[[1, 2], [3, 4]],
 TEST_BASIC_RANDOM = [RandFixMatrix(RANDOM_SIZE[i], RANDOM_SIZE[i] + 1, MIN_RANGE, MAX_RANGE).get()
                       for i in range(TEST_NUM)]
 
+
 @pytest.mark.order(1)
 @pytest.mark.dependency(name="s6t10_test_basic", scope="session")
 class TestBasic:

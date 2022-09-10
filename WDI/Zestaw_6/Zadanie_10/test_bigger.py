@@ -24,6 +24,7 @@ TEST_RANDOM_MEDIUM = [RandFixMatrix(RANDOM_SIZE_COLS[i], RANDOM_SIZE_ROWS[i], MI
 TEST_RANDOM_BIG = [RandFixMatrix(RANDOM_SIZE_COLS[i], RANDOM_SIZE_ROWS[i], MIN_RANGE_B, MAX_RANGE_B).get()
                       for i in range(TEST_NUM)]
 
+
 @pytest.mark.order(2)
 @pytest.mark.dependency(name="s6t10_test_bigger", depends=['s6t10_test_basic'], scope="session")
 class TestBasic:
