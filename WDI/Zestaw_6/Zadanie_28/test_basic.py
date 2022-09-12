@@ -19,11 +19,12 @@ TEST_BASIC_RANDOM = [RandFixArray(RANDOM_SIZE[i], MIN_RANGE, MAX_RANGE).get() fo
 
 
 @pytest.mark.order(1)
-@pytest.mark.dependency(name="s6t28_test_basic", scope="session")
+@pytest.mark.dependency(name='s6t28_test_basic', scope='session')
 class TestBasic:
-    @pytest.mark.parametrize("data", TEST_BASIC)
-    def test_basic(data):
+    @pytest.mark.parametrize('data', TEST_BASIC)
+    def test_basic(self, data):
         assert user_sol(data) == corr_sol(data)
-    @pytest.mark.parametrize("data", TEST_BASIC_RANDOM)
-    def test_basic_random(data):
+
+    @pytest.mark.parametrize('data', TEST_BASIC_RANDOM)
+    def test_basic_random(self, data):
         assert user_sol(data) == corr_sol(data)
