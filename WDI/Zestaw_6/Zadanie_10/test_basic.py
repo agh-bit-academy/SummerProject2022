@@ -19,7 +19,7 @@ TEST_BASIC = [
     [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 ]
 
-TEST_BASIC_RANDOM = [RandFixMatrix(R_SIZE[i], R_SIZE[i] + 1, MIN_RANGE, MAX_RANGE).get() for i in range(TEST_NUM)]
+TEST_BASIC_RANDOM = [RandFixMatrix(R_SIZE[i], R_SIZE[i], MIN_RANGE, MAX_RANGE).get() for i in range(TEST_NUM)]
 
 
 @pytest.mark.order(1)
