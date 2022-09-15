@@ -7,14 +7,14 @@ import pytest
 
 
 MIN_RANGE_M = 0
-MAX_RANGE_M = 100
-MIN_RANGE_B = 100
-MAX_RANGE_B = 10 ** 2
+MAX_RANGE_M = 15
+MIN_RANGE_B = 16
+MAX_RANGE_B = 25
 TEST_NUM = 15
-L_RANGE_M = 100
-R_RANGE_M = 10 ** 2
-L_RANGE_B = 10 ** 2
-R_RANGE_B = 10 ** 4
+L_RANGE_M = 8
+R_RANGE_M = 10
+L_RANGE_B = 11
+R_RANGE_B = 13
 RANDOM_SIZE_M = [randint(L_RANGE_M, R_RANGE_M) for _ in range(TEST_NUM)]
 RANDOM_SIZE_B = [randint(L_RANGE_B, R_RANGE_B) for _ in range(TEST_NUM)]
 

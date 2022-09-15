@@ -13,7 +13,7 @@ L_RANGE = 1
 R_RANGE = 5
 RANDOM_SIZE = [randint(L_RANGE, R_RANGE) for _ in range(TEST_NUM)]
 
-TEST_BASIC = [[0, 1, 2, 3], [5, 6, 10, 7], [2, 4, 8, 16, 32], [1, 17, 29, 42], [13, 17, 19]]
+TEST_BASIC = [[0, 1, 2, 3], [2, 3, 5, 7, 15], [2, 4, 8, 16, 32], [1, 17, 29, 42], [13, 17, 19]]
 
 TEST_BASIC_RANDOM = [RandFixArray(RANDOM_SIZE[i], MIN_RANGE, MAX_RANGE).get() for i in range(TEST_NUM)]
 
