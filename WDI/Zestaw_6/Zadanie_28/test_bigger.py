@@ -1,12 +1,13 @@
 # Izabella Rosikoń
-from ....Rand_Templates.RandFixArray import RandFixArray
+# Juliusz Wasieleski
 from .prog import f as user_sol
 from .sol import f as corr_sol
+from .test_basic import generate
 from random import randint
 import pytest
 
 
-MIN_RANGE_M = 0
+MIN_RANGE_M = 1
 MAX_RANGE_M = 15
 MIN_RANGE_B = 16
 MAX_RANGE_B = 25
@@ -18,9 +19,9 @@ R_RANGE_B = 13
 RANDOM_SIZE_M = [randint(L_RANGE_M, R_RANGE_M) for _ in range(TEST_NUM)]
 RANDOM_SIZE_B = [randint(L_RANGE_B, R_RANGE_B) for _ in range(TEST_NUM)]
 
-TEST_RANDOM_MEDIUM = [RandFixArray(RANDOM_SIZE_M[i], MIN_RANGE_M, MAX_RANGE_M).get() for i in range(TEST_NUM)]
+TEST_RANDOM_MEDIUM = [generate(MIN_RANGE_M, MAX_RANGE_M, L_RANGE_M, R_RANGE_M) for _ in range(TEST_NUM)]
 
-TEST_RANDOM_BIG = [RandFixArray(RANDOM_SIZE_B[i], MIN_RANGE_B, MAX_RANGE_B).get() for i in range(TEST_NUM)]
+TEST_RANDOM_BIG = [generate(MIN_RANGE_B, MAX_RANGE_B, L_RANGE_B, R_RANGE_B) for _ in range(TEST_NUM)]
 
 
 @pytest.mark.order(2)
