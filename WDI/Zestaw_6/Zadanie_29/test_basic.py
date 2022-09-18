@@ -16,14 +16,14 @@ TEST_BASIC = [([(0, 0, 0), (0, 0, 0), (0, 0, 0)], 0, True),
               ]
 
 TEST_NUM = 32
-L_RANGE = -100
-R_RANGE = 100
+L_RANGE = -200
+R_RANGE = 200
 SIZE = 15
-MAX_R = 1500
+MAX_R = 10
 
-COORDS_TAB = [RandFixArray(3, L_RANGE, R_RANGE) for _ in range(SIZE)]
+COORDS_TAB = [RandFixArray(3, L_RANGE, R_RANGE).get() for _ in range(SIZE)]
 
-TEST_SMALL = [(COORDS_TAB, randint(0, R_RANGE)) for _ in range(TEST_NUM)]
+TEST_SMALL = [(COORDS_TAB, randint(0, MAX_R)) for _ in range(TEST_NUM)]
 
 
 @pytest.mark.order(1)
