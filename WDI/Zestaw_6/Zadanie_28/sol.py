@@ -8,9 +8,9 @@ def count_one(num):
 
 
 def f(T, i=0, sum1=0, sum2=0, sum3=0):
-    if sum1 == sum2 == sum3 != 0:
-        return True
     if i == len(T):
+        if sum1 == sum2 == sum3 != 0:
+            return True
         return False
     a = f(T, i + 1, sum1 + count_one(T[i]), sum2, sum3)
     b = f(T, i + 1, sum1, sum2 + count_one(T[i]), sum3)
