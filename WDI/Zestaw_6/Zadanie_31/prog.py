@@ -1,3 +1,3 @@
 def f(n):
-    # Tutaj wprowadź swoje roziœ
+    # Tutaj wprowadź swoje rozwiązanie
     return
