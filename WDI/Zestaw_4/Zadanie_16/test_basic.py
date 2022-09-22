@@ -20,7 +20,7 @@ BASIC_RANDOM = [[RandFixArray(SIZE, START, END).get() for _ in range(SIZE)] for 
 
 
 @pytest.mark.order(1)
-@pytest.mark.dependency(name="test_basic_s4t15", scope="session")
+@pytest.mark.dependency(name="test_basic_s4t16", scope="session")
 class TestBasic():
     @pytest.mark.parametrize("data", BASIC)
     def test_basic(self, data):
