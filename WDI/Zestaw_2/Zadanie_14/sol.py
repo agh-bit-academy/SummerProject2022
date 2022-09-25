@@ -14,8 +14,8 @@ def prime(n):
     if n % 2 == 0 or n % 3 == 0:
         return False
     i = 6
-    while i-1 <= int(n ** 0.5)+1:
-        if n % (i-1) == 0:
+    while i - 1 <= int(n ** 0.5) + 1:
+        if n % (i - 1) == 0:
             return False
         if n % (i + 1) == 0:
             return False
@@ -26,7 +26,7 @@ def prime(n):
 # korzystam z maski bitowej np 13 to 1101, 1 : biorę cyfrę z pierwszej liczby, 0 : z drugiej
 # jednocześnie tworzę liczby dla maski i NOT maska, czyli 1101 i 0010, w ten sposób sprawdzam
 # wszystkie możliwości utworzenia liczby z zadania
-def createNumber(m, n, mask, counter):
+def create_number(m, n, mask, counter):
     number1 = 0
     number2 = 0
     n1, m1 = n, m
@@ -55,6 +55,6 @@ def createNumber(m, n, mask, counter):
 def f(n, m):
     length = int(log10(n)) + int(log10(m)) + 2
     counter = 0
-    for i in range(2**(length - 1), 2**length):
-        counter = createNumber(m, n, i, counter)
+    for i in range(2 ** (length - 1), 2 ** length):
+        counter = create_number(m, n, i, counter)
     return counter

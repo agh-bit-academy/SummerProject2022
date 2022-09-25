@@ -19,9 +19,9 @@ SMALL_RANDOM_TESTS_2 = [RandFixArray(SIZE, LRANGE, RRANGE_2).get() for _ in rang
 @pytest.mark.dependency(name="test_small_s3t16", depends=["test_basic_s3t16"], scope="session")
 class TestSmallRandom:
     @pytest.mark.parametrize("data", SMALL_RANDOM_TESTS_1)
-    def test_small_random_1(data):
+    def test_small_random_1(self, data):
         assert user_sol(data) == corr_sol(data)
 
     @pytest.mark.parametrize("data", SMALL_RANDOM_TESTS_2)
-    def test_small_random_2(data):
+    def test_small_random_2(self, data):
         assert user_sol(data) == corr_sol(data)

@@ -20,7 +20,7 @@ MIN_RANGE = 10
 MAX_RANGE = 10 ** 6
 TEST_NUM = 90
 TEST_RANDOM = [
-    [randint(MIN_RANGE, MAX_RANGE), randint(MIN_RANGE, MAX_RANGE)] 
+    [randint(MIN_RANGE, MAX_RANGE), randint(MIN_RANGE, MAX_RANGE)]
     for _ in range(TEST_NUM)]
 
 

@@ -16,11 +16,11 @@ def weight_count(x):
 def f(A):
     n = len(A)
     weight_tab = [0 for _ in range(n)]
-    sum = 0
+    summ = 0
     for i in range(n):
         weight_tab[i] = weight_count(A[i])
-        sum += weight_tab[i]
-    if sum % 3 != 0:
+        summ += weight_tab[i]
+    if summ % 3 != 0:
         return False
     if rec(weight_tab):
         return True
@@ -30,5 +30,5 @@ def f(A):
 def rec(tab, i=0, s1=0, s2=0, s3=0):
     if i == len(tab):
         return s1 == s2 and s2 == s3
-    return rec(tab, i + 1, s1 + tab[i], s2, s3) or rec(tab, i + 1, s1, s2 + tab[i], s3)\
-         or rec(tab, i + 1, s1, s2, s3 + tab[i])
+    return rec(tab, i + 1, s1 + tab[i], s2, s3) or rec(tab, i + 1, s1, s2 + tab[i], s3) or rec(tab, i + 1, s1, s2,
+                                                                                               s3 + tab[i])

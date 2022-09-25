@@ -2,10 +2,10 @@
 from random import randint
 
 
-def has_Odd(number):
+def has_odd(number):
     while number > 0:
-        lastDigit = number % 10
-        if lastDigit % 2 == 1:
+        last_digit = number % 10
+        if last_digit % 2 == 1:
             return True
         number //= 10
     return False
@@ -14,6 +14,6 @@ def has_Odd(number):
 def f(n):
     array = [randint(1, 1000) for _ in range(n)]
     for number in array:
-        if has_Odd(number) is False:
+        if has_odd(number) is False:
             return array, False
     return array, True

@@ -7,6 +7,7 @@ def reverse(x):
         x //= 10
     return new_x
 
+
 def f(num):
     # sprawdzanie czy liczba jest palindromem w systemie dziesiętnym
     if reverse(num) == num:

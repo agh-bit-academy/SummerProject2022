@@ -6,15 +6,15 @@ from .sol import f as corr_sol
 from random import randint
 
 TEST_NUM = 20
-L_BOUND = 10**2
+L_BOUND = 10 ** 2
 R_BOUND = 500
-MIN_NUM = 10**3
-MAX_NUM = 10**8
+MIN_NUM = 10 ** 3
+MAX_NUM = 10 ** 8
 
 ROWS_LENGTH = RandArr(TEST_NUM, L_BOUND, R_BOUND)
 
-BIG_RAND_TESTS = [[RandArr(ROWS_LENGTH[i], MIN_NUM, MAX_NUM).get()
-                    for _ in range(randint(L_BOUND, R_BOUND))] for i in range(TEST_NUM)]
+BIG_RAND_TESTS = [[RandArr(ROWS_LENGTH[i], MIN_NUM, MAX_NUM).get() for _ in range(randint(L_BOUND, R_BOUND))] for i in
+                  range(TEST_NUM)]
 
 
 @pytest.mark.order(2)
