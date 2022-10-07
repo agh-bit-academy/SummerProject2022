@@ -13,6 +13,7 @@ BASIC_TESTS = [
     [9, 5, 9, 7, 5, 9, 5, 7, 5],
 ]
 
+
 @pytest.mark.order(1)
 @pytest.mark.dependency(name="test_basic_s3t18", scope="session")
 @pytest.mark.parametrize("data", BASIC_TESTS)
