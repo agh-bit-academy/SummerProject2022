@@ -30,11 +30,11 @@ BASIC_RANDOM_TESTS = [(randint(MIN_RANGE, MAX_RANGE), randint(BASE_LRANGE, BASE_
 
 @pytest.mark.order(1)
 @pytest.mark.dependency(name="test_basic_s3t1", scope="session")
-class Basic:
+class TestBasic:
     @pytest.mark.parametrize("data", BASIC_TESTS)
     def test_basic(self, data):
-        assert user_sol(data) == corr_sol(data)
+        assert user_sol(*data) == corr_sol(*data)
 
     @pytest.mark.parametrize("data", BASIC_RANDOM_TESTS)
     def test_basic_random(self, data):
-        assert user_sol(data) == corr_sol(data)
+        assert user_sol(*data) == corr_sol(*data)
